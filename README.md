@@ -9,7 +9,7 @@ upstream reports. Start at [`analysis/bug_reports/FILING_PLAN.md`](analysis/bug_
 
 ---
 
-## Notes for Abdullah — start here
+
 
 > **On a server that gives you LXC rather than Docker?** Go to
 > [`RUN_ON_LXC.md`](RUN_ON_LXC.md) instead — it is a standalone native path (no image, no
