@@ -1,0 +1,252 @@
+{
+  "/([^h\\w]?^\\B|cO)|^/ug": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/(?!(?!\\V*(?=.?K$.p|\\b)|\\B))|\\B/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/cxRf(\\B$(P*(?=($|^)*|\\b)|$)|$)+|$/im": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/.?.?[^Q\\!][^f]dQhB|\\B/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/(\\W*|\\z((?:[^\\d]|$))*)/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/(?=(?=(?=(?![sQ]$|\\b)|\\B)|\\b)|$)|/mm": {
+    "node": false,
+    "deno": false,
+    "bun": false
+  },
+  "/[^\\-\\A]|\\B([^\\7d]?|\\b)?/gi": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/h\\B(?!\\b\\b\\BMQD.|.(?=[\\2]?|\\B))|/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\b(?!\\6+|(?=((?:\\bC+|\\b))|))|\\B/gy": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\b/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/^|\\B^[^cW\\<P]{70359,}/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/.\\s?|[xA\\SR\\D]/y": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "//i": {
+    "node": false,
+    "deno": false,
+    "bun": false
+  },
+  "/((?:|(?=^..(?!(?=.*(?=(?=[]*|\\B)|\\b)|^)|\\B)|$)))|/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/(?!|[](?!$(?=||.+((?:(?!|zqKy?)|^)))|^))|\\B/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/.(?!(?!((?:kLhnv(?!(?!|^)|\\b)|\\B))+|\\B)|\\B)|^/gs": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/$(?!$|.uufwT*(?!.A?^$|\\B))/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\b|$[^]\\@|(?!\\b||^|(?!.\\B(?=$c*)|\\B))/ys": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/.{3009}[a]+|\\BMGva/gs": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/I*.|\\b|^e{6,648}\\b/ui": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/|$|\\b[^\\Dy\\p]+$\\B/sy": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/Emcck{83312}.\\b^|^/is": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\b|fpcRX\\B(?!\\o^\\B|$(?=$P{22}|^))/iy": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/((?:|\\b(?=\\b\\b|(?!^VeS+|\\B))))*|\\B/uy": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/[e\\wA]+((?:\\b(?=\\B$((?:\\b|^))|$)|\\B))+/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\b[vNq\\H\\8]?U|./": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/(?![^]\\bS[^]{08309,}|^)|^/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\bFuB*^(?!\\B||.?G(^\\B$[K\\0PQ\\1]|\\B)?)|\\b/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/[^\\9\\D]$(?=$\\4[R\\w]|^)|^/gi": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/(?![^\\d\\0\\C\\W])\\L/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\6{6,}$(?!(?=R*|[^\\1]?)|)/su": {
+    "node": false,
+    "deno": false,
+    "bun": false
+  },
+  "/(?=$(?=$.?|(?!\\b([^\\S])))|\\b)|\\B/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\B\\b($\\b)*|.{0153,5}/s": {
+    "node": false,
+    "deno": false,
+    "bun": false
+  },
+  "/[^pNap]y/m": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/|k|(?!(?!^P\\8(?=(?!|\\B)|KCImb)|^)|\\B)/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\s*(?=F|.?(?=||.o\\B(?![\\\"\\S]{629}|\\b)))|\\B/ys": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/(o((?:((?:.^|\\B))?|\\b))|$)|^/gs": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\b|||fNFX*\\LncU^.?/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/([\\I\\s\\D]\\6+)|\\B/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/h+|||\\1+U|\\7\\b[]+/sy": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/|(?!)O{87}.?.|[d\\6]+/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\b|.+(?=|)^|(?=|s?(?![^J]|\\B))/ii": {
+    "node": false,
+    "deno": false,
+    "bun": false
+  },
+  "/|\\BNDP?|^$^$/gyuum": {
+    "node": false,
+    "deno": false,
+    "bun": false
+  },
+  "/ubkR+(?!\\J?((?:xmcZ+|\\B))+)|$/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/k(?!|v[^g\\~dh\\w])|\\B/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/|(?=[B\\d]|[^Uj\\sc])/su": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/(?=)|/ysgim": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/.?^(?=[^S\\z\\3]?\\D\\9+|\\b)|^/": {
+    "node": true,
+    "deno": true,
+    "bun": true
+  },
+  "/\\b|/msyiy": {
+    "node": false,
+    "deno": false,
+    "bun": false
+  },
+  "/|\\B\\b.+(?=||(?!..|\\BQ*|\\5?BSNg*))/ss": {
+    "node": false,
+    "deno": false,
+    "bun": false
+  }
+}

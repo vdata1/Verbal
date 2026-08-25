@@ -1,0 +1,605 @@
+engine pins OK: node=26.5.0, bun=1.3.14, deno=2.9.1
+/probe/nominate_probe.py:30: SyntaxWarning: invalid escape sequence '\s'
+==============================================================================
+CONTROLS (same ladder -> sweep -> classify path as the corpus below)
+  PASS  regex_3910 raw fuzzer string     -> EXPONENTIAL   (want EXPONENTIAL)
+        base 1.983 R2 0.9999 on 14 rungs (len 10..24, dearest 7.10ms)
+  PASS  /(a+)+$/ non-matching seed       -> EXPONENTIAL   (want EXPONENTIAL)
+        base 2.006 R2 1.0000 on 15 rungs (len 6..20, dearest 9.35ms)
+  PASS  /(a+)+$/ MATCHING seed           -> SAFE          (want SAFE)
+        never reached 10x call overhead over 40 rungs
+  PASS  /^a+$/ non-matching seed         -> SAFE          (want SAFE)
+        never reached 10x call overhead over 41 rungs
+
+==============================================================================
+regexes read: 3761   swept: 3525
+  skipped, pattern not python-compilable : 145
+  skipped, chaos made no non-matching mutant: 91
+  oracle SIGALRM timeouts: 8 mutants across 3 regexes (each an in-process re backtrack -- would have wedged an unbounded oracle)
+
+verdicts (node): ERROR=1  EXPONENTIAL=2  LINEAR=1  POLYNOMIAL=48  SAFE=3333  UNCLASSIFIED=140
+
+==============================================================================
+NOMINATED / notable:
+  [EXPONENTIAL] regex_8206 on node  (seed 28 chars)
+      /.*yaml-tests[\/\\]/
+      base 1.102 R2 0.9937 on 12 rungs (len 17..28, dearest 0.00ms)
+  [EXPONENTIAL] regex_8848 on node  (seed 21 chars)
+      /^([^.]+).([^.]+)$/
+      base 1.104 R2 0.9996 on 3 rungs (len 19..21, dearest 0.00ms)
+  [POLYNOMIAL] regex_6071 on node  (seed 44 chars)
+      /.*not support.*/
+      k 2.00 R2 0.9996 on 28 rungs
+  [POLYNOMIAL] regex_6209 on node  (seed 25 chars)
+      /(?:<?)[A-Za-z0-9_\.\/\-_]+@[A-Za-z0-9_\.\/\-_]+(?:>?)/
+      k 1.86 R2 0.9985 on 11 rungs
+  [POLYNOMIAL] regex_6239 on node  (seed 46 chars)
+      /.*libtdsodbc.*\.so/
+      k 1.84 R2 0.9994 on 29 rungs
+  [POLYNOMIAL] regex_6273 on node  (seed 46 chars)
+      /([0-9]+\.?[0-9]*[a-z]+)/
+      k 4.14 R2 0.9996 on 19 rungs
+  [POLYNOMIAL] regex_6325 on node  (seed 39 chars)
+      /.*(/objects/info/packs)$/
+      k 2.01 R2 0.9998 on 21 rungs
+  [POLYNOMIAL] regex_6377 on node  (seed 23 chars)
+      /.*\/\//
+      k 1.71 R2 0.9990 on 6 rungs
+  [POLYNOMIAL] regex_6469 on node  (seed 57 chars)
+      /(\S+):(\d+)-(\d+)/
+      k 2.07 R2 0.9936 on 27 rungs
+  [POLYNOMIAL] regex_6702 on node  (seed 38 chars)
+      /.*mockRequest.*/
+      k 1.97 R2 0.9997 on 22 rungs
+  [POLYNOMIAL] regex_6705 on node  (seed 27 chars)
+      /.*static/
+      k 1.69 R2 0.9985 on 11 rungs
+  [POLYNOMIAL] regex_6821 on node  (seed 21 chars)
+      /(.*)tell$/
+      k 1.69 R2 0.9980 on 5 rungs
+  [POLYNOMIAL] regex_6869 on node  (seed 65 chars)
+      /(rekonq)/(\d+)\.(\d+)\.?(\d+)? Safari/
+      k 4.66 R2 0.9986 on 10 rungs
+  [POLYNOMIAL] regex_6993 on node  (seed 28 chars)
+      /(.*)(?=_tools_)/
+      k 1.74 R2 0.9990 on 19 rungs
+  [POLYNOMIAL] regex_6996 on node  (seed 26 chars)
+      /.+\.spec\.js(x?)?$/
+      k 1.65 R2 0.9982 on 8 rungs
+  [POLYNOMIAL] regex_7204 on node  (seed 44 chars)
+      /(\d+\.\d+\.\d+(-.+)?)/
+      k 2.87 R2 0.9988 on 14 rungs
+  [POLYNOMIAL] regex_7288 on node  (seed 40 chars)
+      /.+\.(\d+)$/
+      k 1.89 R2 0.9950 on 23 rungs
+  [POLYNOMIAL] regex_7366 on node  (seed 20 chars)
+      /[ \t]*(\r\n|\n|\r)/
+      k 1.77 R2 0.9966 on 6 rungs
+  [POLYNOMIAL] regex_7496 on node  (seed 102 chars)
+      /.*console.cloud.google.com/dataflow.*/jobs/([a-z|0-9|A-Z|\-|\_]+).*/
+      k 1.88 R2 0.9997 on 51 rungs
+  [POLYNOMIAL] regex_7602 on node  (seed 40 chars)
+      /(?:(?:.*?)\.)?(.*?) IN \(0, 1\)/
+      k 1.87 R2 0.9965 on 18 rungs
+  [POLYNOMIAL] regex_7607 on node  (seed 22 chars)
+      /([a-z.]*)\\:/
+      k 1.91 R2 0.9923 on 5 rungs
+  [POLYNOMIAL] regex_7652 on node  (seed 22 chars)
+      /(.*)\.spy$/
+      k 1.76 R2 0.9991 on 8 rungs
+  [POLYNOMIAL] regex_7669 on node  (seed 31 chars)
+      /[a-z]+.cybozu.com/
+      k 2.71 R2 0.9979 on 3 rungs
+  [POLYNOMIAL] regex_7722 on node  (seed 49 chars)
+      /(.*) -> (.*) = (.*)/
+      k 1.81 R2 0.9991 on 33 rungs
+  [POLYNOMIAL] regex_7804 on node  (seed 22 chars)
+      /(.*)([?&#])(?:_ga=[^&#]*)(?:&?)(.*)/
+      k 1.65 R2 0.9997 on 7 rungs
+  [POLYNOMIAL] regex_7840 on node  (seed 44 chars)
+      /^(.{30})(.*?)(.{30})$/
+      k 4.74 R2 0.9992 on 7 rungs
+  [POLYNOMIAL] regex_7885 on node  (seed 27 chars)
+      /\n*/
+      k 1.76 R2 0.9938 on 11 rungs
+  [POLYNOMIAL] regex_7900 on node  (seed 26 chars)
+      /(\n)+$/
+      k 1.98 R2 0.9983 on 15 rungs
+  [POLYNOMIAL] regex_7945 on node  (seed 57 chars)
+      /.*libcudnn.so\.?(.*) =>.*$/
+      k 1.86 R2 0.9995 on 41 rungs
+  [POLYNOMIAL] regex_7947 on node  (seed 28 chars)
+      /.*\.10xlarge/
+      k 1.73 R2 0.9984 on 12 rungs
+  [POLYNOMIAL] regex_7991 on node  (seed 36 chars)
+      /\[(\+|\*|\()([^:\+\[\]]+)([^\[\]]*?)(\1|\))\]/
+      k 1.98 R2 0.9985 on 24 rungs
+  [POLYNOMIAL] regex_8028 on node  (seed 93 chars)
+      /(.+) \d+(\.\d+)? - Read .+ Chapter \d+(\.\d+)? Online/
+      k 2.19 R2 0.9943 on 49 rungs
+  [POLYNOMIAL] regex_8075 on node  (seed 49 chars)
+      /\s*(class|interface|enum)\s+(\w+)/
+      k 3.37 R2 0.9989 on 8 rungs
+  [POLYNOMIAL] regex_8209 on node  (seed 50 chars)
+      /\btwenty\s*-?\s*seventh\b/
+      k 4.19 R2 0.9988 on 7 rungs
+  [POLYNOMIAL] regex_8230 on node  (seed 21 chars)
+      /(.*) in (\\w+)/
+      k 1.62 R2 0.9998 on 6 rungs
+  [POLYNOMIAL] regex_8328 on node  (seed 43 chars)
+      /\s*\-\s+(Error\:|Warning\:)/
+      k 2.45 R2 0.9916 on 19 rungs
+  [POLYNOMIAL] regex_8385 on node  (seed 35 chars)
+      /[^:]+:\d+/
+      k 1.92 R2 0.9975 on 20 rungs
+  [POLYNOMIAL] regex_8415 on node  (seed 38 chars)
+      /([^\/]*)\/([^ ]*).*/
+      k 1.84 R2 0.9986 on 22 rungs
+  [POLYNOMIAL] regex_8698 on node  (seed 30 chars)
+      / (\d+(\.?\d*)?)$/
+      k 3.02 R2 0.9954 on 13 rungs
+  [POLYNOMIAL] regex_8841 on node  (seed 36 chars)
+      /.*app-only.*/
+      k 1.77 R2 0.9973 on 20 rungs
+  [POLYNOMIAL] regex_8941 on node  (seed 57 chars)
+      /^From:.*?([^\s]*\@[^\s]*)/
+      k 2.14 R2 0.9992 on 39 rungs
+  [POLYNOMIAL] regex_8998 on node  (seed 71 chars)
+      /(\d)(?=(?:\d{3})+$)/
+      k 2.58 R2 0.9993 on 24 rungs
+  [POLYNOMIAL] regex_9037 on node  (seed 31 chars)
+      / *>$/
+      k 1.76 R2 0.9992 on 16 rungs
+  [POLYNOMIAL] regex_9188 on node  (seed 95 chars)
+      /.+style_cssModulesInclusion__.+\{background:.+;color:.+}/
+      k 1.92 R2 0.9999 on 49 rungs
+  [POLYNOMIAL] regex_9198 on node  (seed 70 chars)
+      /.*Cisco Adaptive Security Appliance.*/
+      k 1.86 R2 0.9989 on 47 rungs
+  [POLYNOMIAL] regex_9465 on node  (seed 25 chars)
+      /([A-Za-z0-9]+)\;FOMA/
+      k 2.31 R2 0.9986 on 7 rungs
+  [POLYNOMIAL] regex_9550 on node  (seed 29 chars)
+      /\w+\[(\d+)\]$/
+      k 1.77 R2 0.9983 on 11 rungs
+  [POLYNOMIAL] regex_9756 on node  (seed 49 chars)
+      /.*signature="(.+)",?.*/
+      k 1.81 R2 0.9991 on 34 rungs
+  [POLYNOMIAL] regex_9955 on node  (seed 22 chars)
+      /(.+)\.py$/
+      k 1.60 R2 0.9943 on 5 rungs
+  [POLYNOMIAL] regex_9964 on node  (seed 95 chars)
+      /(?<!\\)(?:\\\\)*<([A-Za-z][A-Za-z0-9+.-]{1,31}:[^ <>]*?|[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[/
+      k 2.24 R2 0.9997 on 4 rungs
+  [UNCLASSIFIED] regex_6017 on node  (seed 43 chars)
+      /(.*)?:(.*)?\|ms/
+      exp b=1.08 R2 0.9686 | poly k=1.65 R2 0.9025
+  [UNCLASSIFIED] regex_6030 on node  (seed 22 chars)
+      /(^0|-?[1-9]\d*$)/
+      exp b=1.08 R2 0.9779 | poly k=1.51 R2 0.9720
+  [UNCLASSIFIED] regex_6033 on node  (seed 36 chars)
+      /\s+([\w:]+="[^"]*)?{~\w+}"?/
+      exp b=1.04 R2 0.9228 | poly k=1.05 R2 0.9525
+  [UNCLASSIFIED] regex_6039 on node  (seed 76 chars)
+      /url\(\s*(['\"]?)\s*(.*?)\s*(\1)\s*\)/
+      exp b=1.08 R2 0.7472 | poly k=3.63 R2 0.8208
+  [UNCLASSIFIED] regex_6046 on node  (seed 54 chars)
+      /^\s*(.*?)\s*(<>|!=|!~|=~|<=|>=|=>|=<|==?|>|<|\s+(?:eq|ne))\s*(.*)/
+      exp b=1.04 R2 0.4476 | poly k=1.28 R2 0.5895
+  [UNCLASSIFIED] regex_6058 on node  (seed 81 chars)
+      /[^\w\/.-]([a-z]*?\d+[a-z]*?)\s*:\s*([a-z]*?\d+[a-z]*?)\s*
+                      (-\s*[a-z]/
+      exp b=1.01 R2 0.5263 | poly k=0.42 R2 0.5193
+  [UNCLASSIFIED] regex_6078 on node  (seed 66 chars)
+      /(\S+)\s(\d+)(/)(\d+)\s(\S+)\s(\d+)\s(\S+)/
+      exp b=1.03 R2 0.9335 | poly k=1.38 R2 0.9791
+  [UNCLASSIFIED] regex_6104 on node  (seed 49 chars)
+      /(-?\d*\.?\d+?)0*e\+?(-?[0-9]*[1-9]?)/
+      exp b=1.10 R2 0.8373 | poly k=2.11 R2 0.9007
+  [UNCLASSIFIED] regex_6148 on node  (seed 39 chars)
+      /([0-9]|[a-f]){32}\.vurl\./
+      exp b=1.25 R2 0.9406 | poly k=8.03 R2 0.9416
+  [UNCLASSIFIED] regex_6151 on node  (seed 61 chars)
+      /[A-Z]+\d+:([A-Z]+\d+)/
+      exp b=1.03 R2 0.8627 | poly k=1.04 R2 0.8057
+  [UNCLASSIFIED] regex_6152 on node  (seed 36 chars)
+      /([a-zA-Z]+)\(([0-9]+)\)/
+      exp b=1.12 R2 0.7843 | poly k=3.71 R2 0.7646
+  [UNCLASSIFIED] regex_6157 on node  (seed 108 chars)
+      /<tr.*>\s*<td.*>.*</td>\s*<td.*<a href="/name/nm(\d{7})[^>]*>([^<]+)</a>\s*(.*)</td>/
+      exp b=1.03 R2 0.9619 | poly k=3.22 R2 0.9618
+  [UNCLASSIFIED] regex_6161 on node  (seed 93 chars)
+      /^(.*\\( *([^\\)]*) *\\))*$/
+      exp b=1.09 R2 0.7381 | poly k=4.13 R2 0.6527
+  [UNCLASSIFIED] regex_6202 on node  (seed 44 chars)
+      /([0-9]+)_([_a-z0-9]*).php/
+      exp b=1.12 R2 0.6237 | poly k=4.67 R2 0.6477
+  [UNCLASSIFIED] regex_6256 on node  (seed 32 chars)
+      /0000*T/
+      exp b=1.10 R2 0.9734 | poly k=2.45 R2 0.9858
+  [UNCLASSIFIED] regex_6257 on node  (seed 45 chars)
+      /[a-z0-9_]+:[a-z0-9_]+:[a-z0-9_]+/
+      exp b=1.04 R2 0.7280 | poly k=1.07 R2 0.7701
+  [UNCLASSIFIED] regex_6270 on node  (seed 32 chars)
+      /^([^a-zA-Z0-9]*)(.*)$/
+      exp b=1.10 R2 0.9997 | poly k=2.71 R2 0.9997
+  [UNCLASSIFIED] regex_6321 on node  (seed 22 chars)
+      /([a-zA-Z0-9_//-]+)=([a-zA-Z0-9_//-]+)/
+      exp b=1.09 R2 0.9996 | poly k=1.47 R2 0.9987
+  [UNCLASSIFIED] regex_6324 on node  (seed 46 chars)
+      /(.*)No setting(.*)get(.*)/
+      exp b=1.07 R2 0.9899 | poly k=2.04 R2 0.9806
+  [UNCLASSIFIED] regex_6350 on node  (seed 23 chars)
+      /.*foo/
+      exp b=1.08 R2 0.9992 | poly k=1.69 R2 0.9980
+  [UNCLASSIFIED] regex_6370 on node  (seed 55 chars)
+      /\s*\{%[^=#].+?%\}\s*/
+      exp b=1.03 R2 0.6647 | poly k=0.93 R2 0.7777
+  [UNCLASSIFIED] regex_6386 on node  (seed 89 chars)
+      /(?:<[\/A-DF-Z][^>]*>)+([Ss]teig)<\/[A-DF-Z]> (?:<[\/A-DF-Z][^>]*>)+(meig)<\/[A-DF-Z]>/
+      exp b=1.01 R2 0.9670 | poly k=1.10 R2 0.9700
+  [UNCLASSIFIED] regex_6392 on node  (seed 41 chars)
+      /\W+(cam|camrip|hdcam)\W*/
+      exp b=1.03 R2 0.4862 | poly k=0.89 R2 0.5824
+  [UNCLASSIFIED] regex_6406 on node  (seed 33 chars)
+      /(\d+%,[+|-]\d+[%|Hz])/
+      exp b=1.01 R2 0.3178 | poly k=0.33 R2 0.2728
+  [UNCLASSIFIED] regex_6423 on node  (seed 43 chars)
+      /\s+\/\/ inc \+= (.*)/
+      exp b=1.03 R2 0.7157 | poly k=1.12 R2 0.7431
+  [UNCLASSIFIED] regex_6433 on node  (seed 37 chars)
+      /\w{8}-\w{4}-\w{4}-\w{4}-\w{12}/
+      exp b=1.04 R2 0.9493 | poly k=1.21 R2 0.9536
+  [UNCLASSIFIED] regex_6506 on node  (seed 32 chars)
+      /((?:[:blank:]|\r?\n)*)(\r?\n)[:blank:]*$/
+      exp b=1.10 R2 0.8679 | poly k=2.06 R2 0.9041
+  [UNCLASSIFIED] regex_6542 on node  (seed 70 chars)
+      /\s*<\s*br\s*\/?\s*>\s*/
+      exp b=1.05 R2 0.9820 | poly k=1.79 R2 0.9285
+  [UNCLASSIFIED] regex_6544 on node  (seed 88 chars)
+      /\s+className=("([^"]+)"(.*)\s+className={(.*?)}((\s+[a-zA-Z0-9]+=)|(\s*>)))/
+      exp b=1.02 R2 0.8903 | poly k=1.56 R2 0.8798
+  [UNCLASSIFIED] regex_6561 on node  (seed 44 chars)
+      /(\d+):(\d+)-(\d+)/
+      exp b=1.03 R2 0.5563 | poly k=1.13 R2 0.6562
+  [UNCLASSIFIED] regex_6576 on node  (seed 81 chars)
+      /season\s+0*(\d+)\s+episode\s+(\d+)/
+      exp b=1.05 R2 0.9814 | poly k=3.45 R2 0.9889
+  [UNCLASSIFIED] regex_6580 on node  (seed 57 chars)
+      /#define\s+(\S+)+\s+(\S+)/
+      exp b=1.56 R2 0.9694 | poly k=10.23 R2 0.9278
+  [UNCLASSIFIED] regex_6596 on node  (seed 60 chars)
+      /(\w+)\s*?([\^\$\*!]?=)\s*'([\w\s]+)/
+      exp b=1.04 R2 0.8783 | poly k=1.18 R2 0.9519
+  [UNCLASSIFIED] regex_6838 on node  (seed 44 chars)
+      /\s*(cmd|cryptid)\s(.+)/
+      exp b=1.04 R2 0.9127 | poly k=1.36 R2 0.9370
+  [UNCLASSIFIED] regex_6883 on node  (seed 41 chars)
+      / *none */
+      exp b=1.06 R2 0.8113 | poly k=1.51 R2 0.8885
+  [UNCLASSIFIED] regex_6894 on node  (seed 77 chars)
+      /([a-zA-Z\$][a-zA-Z0-9\$]*(?:`[a-zA-Z0-9\$]+)*::[a-zA-Z\$][a-zA-Z0-9\$]*):?/
+      exp b=1.02 R2 0.6462 | poly k=1.01 R2 0.6918
+  [UNCLASSIFIED] regex_6931 on node  (seed 30 chars)
+      /^\s*([^=]+)\s*;\s*/
+      exp b=1.04 R2 0.7373 | poly k=0.70 R2 0.8395
+  [UNCLASSIFIED] regex_6934 on node  (seed 36 chars)
+      /(\w+:)(\d+\.?\d*)/
+      exp b=1.03 R2 0.4582 | poly k=0.87 R2 0.5180
+  [UNCLASSIFIED] regex_6945 on node  (seed 84 chars)
+      /<\/?[\w.:-]+\s*(?:\s+(?:[\w\.:-]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+|(?:\{[/
+      exp b=1.08 R2 0.7951 | poly k=4.87 R2 0.8477
+  [UNCLASSIFIED] regex_6949 on node  (seed 32 chars)
+      /.*?\s+(\-.*?)$/
+      exp b=1.10 R2 0.8830 | poly k=2.18 R2 0.9281
+  [UNCLASSIFIED] regex_7018 on node  (seed 80 chars)
+      /([a-z]*)[\x00-\x20]*=*(['\"]*)[\x00-\x20]*-moz-binding[\x00-\x20]*:/
+      exp b=1.05 R2 0.9374 | poly k=2.38 R2 0.9888
+  [UNCLASSIFIED] regex_7059 on node  (seed 56 chars)
+      /(\d+\.\d+)\.\d+(.*)/
+      exp b=1.05 R2 0.8987 | poly k=1.77 R2 0.8473
+  [UNCLASSIFIED] regex_7072 on node  (seed 39 chars)
+      /.*?[#.~:](\w+)$/
+      exp b=1.06 R2 0.9561 | poly k=1.93 R2 0.9450
+  [UNCLASSIFIED] regex_7075 on node  (seed 62 chars)
+      /B:([0-9]*\.?[0-9]+) /([0-9]*\.?[0-9]+)/
+      exp b=1.04 R2 0.8046 | poly k=1.42 R2 0.7676
+  [UNCLASSIFIED] regex_7152 on node  (seed 176 chars)
+      /RubyGems is prompting to install a required dependency.*Gem command was:.*install dependen/
+      exp b=1.01 R2 0.9803 | poly k=1.47 R2 0.9792
+  [UNCLASSIFIED] regex_7191 on node  (seed 109 chars)
+      /\<member\>[\s
+	]*\<name\>[\s
+	]*message[\s
+	]*\<\/name\>[\s
+	]*\<value\>[\s
+	]*(\<str/
+      exp b=1.00 R2 0.4661 | poly k=0.51 R2 0.4705
+  [UNCLASSIFIED] regex_7220 on node  (seed 49 chars)
+      /\s+(.*) => (.*) \(0x/
+      exp b=1.06 R2 0.5773 | poly k=1.69 R2 0.7162
+  [UNCLASSIFIED] regex_7249 on node  (seed 26 chars)
+      /([a-zA-Z\d\.]+)/[a-zA-Z\d\.]*$/
+      exp b=1.09 R2 0.9984 | poly k=1.90 R2 0.9969
+  [UNCLASSIFIED] regex_7260 on node  (seed 61 chars)
+      /\n\s*\n\s*
+        (?!(?:
+            \\chapter |
+            \\paragraph |
+            \\/
+      exp b=1.06 R2 0.9577 | poly k=2.73 R2 0.9675
+  [UNCLASSIFIED] regex_7290 on node  (seed 129 chars)
+      /(["'])(?:(?!\1)[^\\\r\n]|\\.|_(?:\r?\n|\r))*\1/
+      exp b=1.02 R2 0.6261 | poly k=2.10 R2 0.6433
+  [UNCLASSIFIED] regex_7315 on node  (seed 25 chars)
+      /([^=]+)=([^;]+)/
+      exp b=1.09 R2 0.8841 | poly k=1.87 R2 0.8647
+  [UNCLASSIFIED] regex_7378 on node  (seed 68 chars)
+      /([\w\:\-]+)\s*=\s*(?:"((?:\\"|[^"])*)"|'((?:\\'|[^'])*)')/
+      exp b=1.03 R2 0.8915 | poly k=1.50 R2 0.9176
+  [UNCLASSIFIED] regex_7434 on node  (seed 69 chars)
+      /\s*(.*)\s*<>\s*(.*?)$/
+      exp b=1.08 R2 0.9810 | poly k=2.38 R2 0.8901
+  [UNCLASSIFIED] regex_7443 on node  (seed 49 chars)
+      /(.*?)\-(\S+\s*Ten)$/
+      exp b=1.10 R2 0.9924 | poly k=4.28 R2 0.9923
+  [UNCLASSIFIED] regex_7456 on node  (seed 69 chars)
+      /^\s*([^=]*\w)\s*([\?\+]?=)\s*(.*)\s*$/
+      exp b=1.05 R2 0.9314 | poly k=1.79 R2 0.9088
+  [UNCLASSIFIED] regex_7481 on node  (seed 44 chars)
+      /({{\s{0,}(.*[^\s]){1}\s{0,}}})/
+      exp b=1.04 R2 0.9744 | poly k=1.59 R2 0.9746
+  [UNCLASSIFIED] regex_7566 on node  (seed 66 chars)
+      /^([\$a-zA-Z0-9_-]+)\s*=\s*([^;]+);?$/
+      exp b=1.00 R2 0.0748 | poly k=-0.17 R2 0.0735
+  [UNCLASSIFIED] regex_7604 on node  (seed 27 chars)
+      /(\\)(.)(\\.|.)*?(\2)/
+      exp b=1.24 R2 0.9132 | poly k=4.28 R2 0.9265
+  [UNCLASSIFIED] regex_7614 on node  (seed 82 chars)
+      /new connection \('(\d+.\d+.\d+.\d+)', (\d+)\):/
+      exp b=1.08 R2 0.8748 | poly k=4.21 R2 0.7982
+  [UNCLASSIFIED] regex_7647 on node  (seed 27 chars)
+      /^\@|[^\.]+:\d+$/
+      exp b=1.10 R2 0.9993 | poly k=2.02 R2 0.9956
+  [UNCLASSIFIED] regex_7661 on node  (seed 46 chars)
+      /^(@@)\s*(.+?)\s*(@@)($\n?)?/
+      exp b=1.04 R2 0.8722 | poly k=1.72 R2 0.8980
+  [UNCLASSIFIED] regex_7680 on node  (seed 27 chars)
+      /(\*)?(\w+)\.(\w+)(\s*\[\d+,\d+\])?/
+      exp b=1.09 R2 0.9612 | poly k=2.06 R2 0.9597
+  [UNCLASSIFIED] regex_7719 on node  (seed 28 chars)
+      /\w+=\s*$/
+      exp b=1.07 R2 0.9934 | poly k=1.72 R2 0.9921
+  [UNCLASSIFIED] regex_7777 on node  (seed 86 chars)
+      /.{86}$/
+      exp b=1.03 R2 0.8848 | poly k=1.38 R2 0.9677
+  [UNCLASSIFIED] regex_7782 on node  (seed 83 chars)
+      /(?:^|[^\x1f\x1e\dA-Za-zªµºÀ-ÖØ-öø-ɏऀ-ंऄ-ऺ़-ऽु-ै्ॐ-ॣॱ-ॷॹ-ॿḀ-ỿⱠ-ⱿꜢ-ꞈꞋ-ꞎꞐ-ꞓꞠ-Ɦꟸ-ꟿ꣠-ꣷꣻ])((?:(?/
+      exp b=1.01 R2 0.4785 | poly k=0.58 R2 0.4859
+  [UNCLASSIFIED] regex_7833 on node  (seed 37 chars)
+      /\b\S+@[\w.]+[a-z]{2}/
+      exp b=1.06 R2 0.9351 | poly k=1.67 R2 0.9340
+  [UNCLASSIFIED] regex_7904 on node  (seed 65 chars)
+      /.*\s+(on[a-z]+\s*=).*/
+      exp b=1.05 R2 0.9650 | poly k=1.77 R2 0.9630
+  [UNCLASSIFIED] regex_7930 on node  (seed 100 chars)
+      /\{%\s*([a-zA-Z_\-][a-zA-Z_\-0-9]*)\s*(.*?)%\}(.*?)\{%\s*end\1\s*%\}/
+      exp b=1.01 R2 0.8288 | poly k=1.25 R2 0.8400
+  [UNCLASSIFIED] regex_7936 on node  (seed 41 chars)
+      /\s+print\s*\(/
+      exp b=1.04 R2 0.5636 | poly k=1.25 R2 0.6580
+  [UNCLASSIFIED] regex_7973 on node  (seed 20 chars)
+      /(.*)@([^/\\]*)(.*)/
+      exp b=1.09 R2 0.9972 | poly k=1.60 R2 0.9933
+  [UNCLASSIFIED] regex_8007 on node  (seed 27 chars)
+      /(.*)index\.js$/
+      exp b=1.08 R2 0.9991 | poly k=1.70 R2 0.9982
+  [UNCLASSIFIED] regex_8025 on node  (seed 28 chars)
+      /( +)\^$/
+      exp b=1.08 R2 0.9972 | poly k=1.90 R2 0.9939
+  [UNCLASSIFIED] regex_8050 on node  (seed 28 chars)
+      /.*/steamapps/
+      exp b=1.08 R2 0.9916 | poly k=1.78 R2 0.9891
+  [UNCLASSIFIED] regex_8080 on node  (seed 72 chars)
+      /^import\s+(.+)\s+as\s+([a-zA-Z0-9_]+)$/
+      exp b=1.03 R2 0.3502 | poly k=1.41 R2 0.4189
+  [UNCLASSIFIED] regex_8106 on node  (seed 74 chars)
+      /((?:^|\{)([ \t]*))(?:[\w-]|\{[^}\r\n]+\})+(?:\s*:\s*|[ \t]+)[^{\r\n]*(?:;|[^{\r\n,](?=$)(?/
+      exp b=1.01 R2 0.9873 | poly k=0.69 R2 0.9851
+  [UNCLASSIFIED] regex_8150 on node  (seed 33 chars)
+      /.*?<(.*?)>/
+      exp b=1.27 R2 0.8612 | poly k=7.54 R2 0.8611
+  [UNCLASSIFIED] regex_8182 on node  (seed 39 chars)
+      /.*
+(.*),
+.*/
+      exp b=1.06 R2 0.9320 | poly k=1.76 R2 0.9245
+  [UNCLASSIFIED] regex_8212 on node  (seed 51 chars)
+      /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.(/
+      exp b=1.03 R2 0.5838 | poly k=0.90 R2 0.6571
+  [UNCLASSIFIED] regex_8268 on node  (seed 23 chars)
+      /(.+)_allowed\?$/
+      exp b=1.05 R2 0.7828 | poly k=0.92 R2 0.8078
+  [UNCLASSIFIED] regex_8311 on node  (seed 30 chars)
+      /(\d)+\.\.(\d)+/
+      exp b=1.06 R2 0.8454 | poly k=1.22 R2 0.8456
+  [UNCLASSIFIED] regex_8329 on node  (seed 133 chars)
+      /allow.*any_instance.*is probably not what you meant.*allow_any_instance_of.*instead/
+      exp b=1.01 R2 0.7646 | poly k=1.27 R2 0.7473
+  [UNCLASSIFIED] regex_8354 on node  (seed 28 chars)
+      /(\S+):([1-9][0-9]*)/
+      exp b=1.08 R2 0.9956 | poly k=1.78 R2 0.9945
+  [UNCLASSIFIED] regex_8376 on node  (seed 40 chars)
+      /\=[\x20\t\r\n\f]*([^'"\]]*)[\x20\t\r\n\f]*\]/
+      exp b=1.08 R2 0.7731 | poly k=1.77 R2 0.9096
+  [UNCLASSIFIED] regex_8446 on node  (seed 49 chars)
+      /([a-z]*int[a-z]*)\((\d+)\)/
+      exp b=1.04 R2 0.9956 | poly k=1.65 R2 0.9864
+  [UNCLASSIFIED] regex_8478 on node  (seed 39 chars)
+      /(<version>)((\d|\w|[-]|\S)*)</version>/
+      exp b=1.88 R2 0.9877 | poly k=19.89 R2 0.9756
+  [UNCLASSIFIED] regex_8480 on node  (seed 38 chars)
+      /((^|[^YMD]+)(YY(YY)?|MMM?|DDD?)){3}/
+      exp b=1.04 R2 0.7568 | poly k=1.13 R2 0.8363
+  [UNCLASSIFIED] regex_8507 on node  (seed 78 chars)
+      /^from\s\s*.*\s\s*import\s\s*\*/
+      exp b=1.00 R2 0.0049 | poly k=0.28 R2 0.0414
+  [UNCLASSIFIED] regex_8565 on node  (seed 15 chars)
+      /[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*(?=\()/
+      exp b=1.15 R2 0.9801 | poly k=1.76 R2 0.9867
+  [UNCLASSIFIED] regex_8577 on node  (seed 33 chars)
+      /(?=\s*(?:companion|class|object|interface))/
+      exp b=1.09 R2 0.9901 | poly k=2.57 R2 0.9892
+  [UNCLASSIFIED] regex_8578 on node  (seed 28 chars)
+      /.* time: (.*) /
+      exp b=1.11 R2 0.9793 | poly k=2.20 R2 0.9645
+  [UNCLASSIFIED] regex_8628 on node  (seed 24 chars)
+      /\s+=>\s+/
+      exp b=0.99 R2 0.0333 | poly k=-0.16 R2 0.0181
+  [UNCLASSIFIED] regex_8715 on node  (seed 29 chars)
+      /(.+\/package.json$|^package.json$)/
+      exp b=1.09 R2 0.9437 | poly k=1.90 R2 0.9263
+  [UNCLASSIFIED] regex_8716 on node  (seed 29 chars)
+      /.*el.*/
+      exp b=1.08 R2 0.9986 | poly k=1.77 R2 0.9950
+  [UNCLASSIFIED] regex_8718 on node  (seed 69 chars)
+      /\s+(\S+)\s+(\w+)\s+(\d+)\s+(.+)$/
+      exp b=1.04 R2 0.9089 | poly k=1.55 R2 0.9763
+  [UNCLASSIFIED] regex_8742 on node  (seed 40 chars)
+      /(?:^|\n*)--([A-Z-]+)--\n/
+      exp b=1.11 R2 0.5815 | poly k=3.88 R2 0.5621
+  [UNCLASSIFIED] regex_8784 on node  (seed 36 chars)
+      /^(?:url\(("(?:\\(?:.|([ \n\r\t\f]))|[^"\\])*"|'(?:\\(?:.|([ \n\r\t\f]))|[^'\\])*'|[^)]*)\)/
+      exp b=1.11 R2 0.6256 | poly k=3.08 R2 0.5858
+  [UNCLASSIFIED] regex_8792 on node  (seed 143 chars)
+      /\"(.+)\", line ([0-9]+): (?!included)(catastrophic |fatal )*([A-Za-z]+)[:]* (.+)/
+      exp b=1.01 R2 0.9367 | poly k=0.89 R2 0.9619
+  [UNCLASSIFIED] regex_8797 on node  (seed 42 chars)
+      /\d+-\d+-\d+-/
+      exp b=1.04 R2 0.6380 | poly k=1.34 R2 0.7276
+  [UNCLASSIFIED] regex_8818 on node  (seed 70 chars)
+      /(?:[^\/]+\/node_modules\/)?react-server-gulp-module-tagger\/index\.js$/
+      exp b=1.03 R2 0.9575 | poly k=1.29 R2 0.9422
+  [UNCLASSIFIED] regex_8862 on node  (seed 91 chars)
+      /DEF_ANCHOR (\S+).* ON (\d+) .* COMPONENT (\d+)/
+      exp b=1.03 R2 0.8750 | poly k=1.60 R2 0.9334
+  [UNCLASSIFIED] regex_8865 on node  (seed 55 chars)
+      /\s*(<p [^>]+>[\s\S]*?<\/p>)/
+      exp b=1.02 R2 0.7213 | poly k=0.73 R2 0.7826
+  [UNCLASSIFIED] regex_8874 on node  (seed 74 chars)
+      /(<[^>]+)style=([\`\'"]*).*expression\([^>]*>/
+      exp b=1.05 R2 0.9634 | poly k=2.72 R2 0.9888
+  [UNCLASSIFIED] regex_8886 on node  (seed 68 chars)
+      /^@return\s+(.+?)(\s+(.+))?$/
+      exp b=1.02 R2 0.9534 | poly k=1.07 R2 0.9596
+  [UNCLASSIFIED] regex_8976 on node  (seed 31 chars)
+      /\s*WHERE\s*/
+      exp b=1.04 R2 0.7570 | poly k=0.74 R2 0.6918
+  [UNCLASSIFIED] regex_8978 on node  (seed 105 chars)
+      /rs_connect \d+\.\d+\.?\d* - RightLink's server importer \(c\) \d+ RightScale/
+      exp b=1.01 R2 0.7540 | poly k=0.57 R2 0.7570
+  [UNCLASSIFIED] regex_9014 on node  (seed 71 chars)
+      /\A[\ \t\n]*[^\n]*differences between the normalized/
+      exp b=1.03 R2 0.9455 | poly k=1.47 R2 0.9726
+  [UNCLASSIFIED] regex_9041 on node  (seed 92 chars)
+      /^(.*[-_:+ ])*(lon|lng)/
+      exp b=1.06 R2 0.9543 | poly k=3.11 R2 0.9340
+  [UNCLASSIFIED] regex_9054 on node  (seed 29 chars)
+      /^(.*?[/\\]?)([^/\\]+)$/
+      exp b=1.10 R2 0.9972 | poly k=2.66 R2 0.9960
+  [UNCLASSIFIED] regex_9065 on node  (seed 70 chars)
+      /(.*?)www.(.*?).com/(.*?)/app(.*?)/
+      exp b=1.05 R2 0.9907 | poly k=2.40 R2 0.9880
+  [UNCLASSIFIED] regex_9123 on node  (seed 50 chars)
+      /(.*?)([^0-9]+[0-9]+)$/
+      exp b=1.08 R2 0.9078 | poly k=2.09 R2 0.9575
+  [UNCLASSIFIED] regex_9126 on node  (seed 73 chars)
+      /\s*\(\s*(|20|30)10\s*\(([^\)]*)\).*/
+      exp b=1.05 R2 0.7861 | poly k=2.45 R2 0.8572
+  [UNCLASSIFIED] regex_9139 on node  (seed 24 chars)
+      /[^\/]*\.[^\/*]+$/
+      exp b=1.08 R2 0.9984 | poly k=1.61 R2 0.9983
+  [UNCLASSIFIED] regex_9194 on node  (seed 50 chars)
+      /^#*(.+?)#*$/
+      exp b=1.04 R2 0.9066 | poly k=1.56 R2 0.9360
+  [UNCLASSIFIED] regex_9200 on node  (seed 49 chars)
+      /<\s*(\/?)\s*(font[^>]*?)\s*>/
+      exp b=1.01 R2 0.0503 | poly k=0.51 R2 0.1048
+  [UNCLASSIFIED] regex_9237 on node  (seed 44 chars)
+      /(.*)\s+<unfinished \.\.\.>/
+      exp b=1.07 R2 0.9425 | poly k=1.88 R2 0.9340
+  [UNCLASSIFIED] regex_9244 on node  (seed 39 chars)
+      /(\w+)\s+\[(.*)\]\s+"(.*)"/
+      exp b=1.04 R2 0.9421 | poly k=1.38 R2 0.9464
+  [UNCLASSIFIED] regex_9253 on node  (seed 56 chars)
+      /(^|[^0-9A-Za-zªµºÀ-ÖØ-öø-ɏḀ-ỿⱠ-ⱿꜢ-ꞈꞋ-ꞎꞐ-ꞓꞠ-Ɦꟸ-ꟿ])((?:Prv(?:[y\xFD][\s\xa0]*list[\s\xa0]*(?/
+      exp b=1.01 R2 0.8259 | poly k=0.37 R2 0.8680
+  [UNCLASSIFIED] regex_9272 on node  (seed 83 chars)
+      /^(((((true|false):\d+)\s{0,1})+,{0,1})+;{0,1})+\s+\+\-(.+)$/
+      exp b=1.05 R2 0.8400 | poly k=2.38 R2 0.8644
+  [UNCLASSIFIED] regex_9280 on node  (seed 34 chars)
+      /(\w+)=("[^"]*"|'[^']*')/
+      exp b=1.04 R2 0.9874 | poly k=1.17 R2 0.9842
+  [UNCLASSIFIED] regex_9286 on node  (seed 67 chars)
+      /^\s*<\s*(.*)\s*>\s*$/
+      exp b=1.00 R2 0.0003 | poly k=-0.13 R2 0.0028
+  [UNCLASSIFIED] regex_9319 on node  (seed 51 chars)
+      /([\w\-]+):nth-child\((\d+)\)/
+      exp b=1.02 R2 0.3378 | poly k=0.76 R2 0.4082
+  [UNCLASSIFIED] regex_9361 on node  (seed 70 chars)
+      /\s*port-object (eq|gt|lt|range) (\S+)\s*(\S*)/
+      exp b=1.02 R2 0.4941 | poly k=0.78 R2 0.6368
+  [UNCLASSIFIED] regex_9389 on node  (seed 69 chars)
+      /\[\s*([0-9]*)-([0-9]*)\s*([0-9]*):([0-9]*):([0-9]*).([0-9]*)\s*([0-9]*):\s*([0-9]*)\s*([VD/
+      exp b=0.99 R2 0.2184 | poly k=-0.32 R2 0.2329
+  [UNCLASSIFIED] regex_9394 on node  (seed 34 chars)
+      /([\+\-\/\*]*[0-9]+)([a-z_αAβBγΓδΔϵEζZηHθΘιIκKλΛμMνNξΞoOπΠρPσΣτTυϒϕΦχXψΨωΩ]+[\+\-\/\*]*)/
+      exp b=1.03 R2 0.6911 | poly k=0.84 R2 0.6426
+  [UNCLASSIFIED] regex_9445 on node  (seed 42 chars)
+      /\s+ip ospf dead-interval /
+      exp b=1.06 R2 0.8851 | poly k=2.27 R2 0.8981
+  [UNCLASSIFIED] regex_9457 on node  (seed 69 chars)
+      /\d+\s+@\s+\d+\.\d+\s+sd\s+\d+\.\d+\s+(\w+)$/
+      exp b=1.02 R2 0.6490 | poly k=1.15 R2 0.7216
+  [UNCLASSIFIED] regex_9489 on node  (seed 43 chars)
+      /([0-9]+)\s+([0-9]+)/
+      exp b=1.03 R2 0.7463 | poly k=0.92 R2 0.8490
+  [UNCLASSIFIED] regex_9490 on node  (seed 51 chars)
+      /(([\d\.]{4,})-(bad-)?(.*))(-items|-nodes)(-xx)?\.json/
+      exp b=1.07 R2 0.9224 | poly k=2.30 R2 0.9407
+  [UNCLASSIFIED] regex_9506 on node  (seed 39 chars)
+      /(.+)\[(\d+)]/
+      exp b=1.07 R2 0.9877 | poly k=1.90 R2 0.9827
+  [UNCLASSIFIED] regex_9556 on node  (seed 53 chars)
+      /.*\((.*)\.algolia.net.*/
+      exp b=1.05 R2 0.9279 | poly k=1.78 R2 0.9727
+  [UNCLASSIFIED] regex_9577 on node  (seed 67 chars)
+      /^(\.?\w+)*$/
+      exp b=1.80 R2 0.9720 | poly k=17.44 R2 0.9821
+  [UNCLASSIFIED] regex_9600 on node  (seed 67 chars)
+      /\s*["']\s*,\s*["']\s*/
+      exp b=1.04 R2 0.8622 | poly k=1.57 R2 0.9502
+  [UNCLASSIFIED] regex_9711 on node  (seed 38 chars)
+      /\s+\(truetype\).*$/
+      exp b=1.00 R2 0.0084 | poly k=0.03 R2 0.0126
+  [UNCLASSIFIED] regex_9771 on node  (seed 143 chars)
+      /\<i>(((?!\</i>).)*)\</i>/
+      exp b=1.00 R2 0.5165 | poly k=0.51 R2 0.5282
+  [UNCLASSIFIED] regex_9790 on node  (seed 83 chars)
+      /^\s*(<[a-zA-Z_][a-zA-Z0-9_:-]*(?:\s+[a-z]+="[^"]*")*\s*\/?\s*>)\s*/
+      exp b=1.01 R2 0.5576 | poly k=0.46 R2 0.6370
+  [UNCLASSIFIED] regex_9799 on node  (seed 36 chars)
+      /(\s|\))[-+]?[0-9]*\.?[0-9]+(?:\s*[-+]\s*[0-9]*\.?[0-9]+i)?\b/
+      exp b=1.00 R2 0.6433 | poly k=0.08 R2 0.6525
+  [UNCLASSIFIED] regex_9831 on node  (seed 76 chars)
+      /\s*tcpOutDataSegs\s*=\s*(\d+)\s*/
+      exp b=1.04 R2 0.9479 | poly k=1.78 R2 0.8957
+  [UNCLASSIFIED] regex_9847 on node  (seed 27 chars)
+      /[^\[]*\[[^\]]*\]\[([^\]]*)\](\[(\d)\])?/
+      exp b=1.10 R2 0.9887 | poly k=1.91 R2 0.9866
+  [UNCLASSIFIED] regex_9859 on node  (seed 50 chars)
+      /(.+)/(.+)/description\\.xml/
+      exp b=1.07 R2 0.9836 | poly k=2.21 R2 0.9771
+  [UNCLASSIFIED] regex_9876 on node  (seed 63 chars)
+      /-+files to be added-+\nmetadata\.json/
+      exp b=1.01 R2 0.5925 | poly k=0.74 R2 0.5862

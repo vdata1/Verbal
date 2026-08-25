@@ -1,0 +1,21 @@
+{"kind": "meta", "regex_id": "regex_9921", "api": "test", "pattern": "\\p{Uppercase_Letter}", "flags": "u", "api_required_flags": "", "regex_requires_flags": "u", "flag_variants": ["u", "iu", "mu", "su"], "count": 20, "provenance": {"git_commit": "8dc8b1d3df8b1ea648b30d81a458e9014dd4c48a", "config_sha": "d769e16a7cda2f6d72eb588b3dd1b24c8759cce2d09f453fd00753e4632790bd", "seed": 0, "corpus": "data/uniq-regexes-8.json", "corpus_sha": "999fe71e83f0db26931d6810164bff9efefdf3f6791d3444aa770ccdafe280e9", "resolved_config": {"seed": 0, "corpus": "data/uniq-regexes-8.json", "eval_slice": 10000, "matchall_k": 3, "pad_candidates": ["\n", " ", "\t", "X", "\u0000", " "], "flag_variants": ["", "i", "m", "s"], "fuzz_n": 20, "fuzz_max_generations": 200, "fuzz_timeout_s": 30, "engines": ["node", "bun", "deno"]}}}
+{"kind": "string", "n": 0, "string": "\u2145", "py_re_matches": 1}
+{"kind": "string", "n": 1, "string": "\ua660", "py_re_matches": 1}
+{"kind": "string", "n": 2, "string": "\u1caa", "py_re_matches": 1}
+{"kind": "string", "n": 3, "string": "\ud835\udf90", "py_re_matches": 1}
+{"kind": "string", "n": 4, "string": "\u13e5", "py_re_matches": 1}
+{"kind": "string", "n": 5, "string": "\ud835\udde3", "py_re_matches": 1}
+{"kind": "string", "n": 6, "string": "\ud835\udc3e", "py_re_matches": 1}
+{"kind": "string", "n": 7, "string": "\u1cb8", "py_re_matches": 1}
+{"kind": "string", "n": 8, "string": "\ud835\udeb7", "py_re_matches": 1}
+{"kind": "string", "n": 9, "string": "\u022e", "py_re_matches": 1}
+{"kind": "string", "n": 10, "string": "\ud803\udd5e", "py_re_matches": 1}
+{"kind": "string", "n": 11, "string": "\u2ceb", "py_re_matches": 1}
+{"kind": "string", "n": 12, "string": "\u018e", "py_re_matches": 1}
+{"kind": "string", "n": 13, "string": "\u00c2", "py_re_matches": 1}
+{"kind": "string", "n": 14, "string": "\ud835\udc48", "py_re_matches": 1}
+{"kind": "string", "n": 15, "string": "C", "py_re_matches": 1}
+{"kind": "string", "n": 16, "string": "\u1e52", "py_re_matches": 1}
+{"kind": "string", "n": 17, "string": "\ud835\udf22", "py_re_matches": 1}
+{"kind": "string", "n": 18, "string": "\u0549", "py_re_matches": 1}
+{"kind": "string", "n": 19, "string": "\ud835\uddea", "py_re_matches": 1}

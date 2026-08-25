@@ -1,0 +1,93 @@
+# Live probe on the pinned engines (Docker image verbal:8dc8b1d == verbal:latest as
+# of 2026-07-15). Engines: node v26.5.0, bun 1.3.14, deno 2.9.1. See probe.js.
+#
+# Generated: docker run --rm --entrypoint sh -v "$PWD/$D:/probe:ro" verbal:8dc8b1d \
+#              -c '<engine> /probe/probe.js'
+
+===== node =====
+self-reported: unicode=17.0 icu=78.3
+
+[1] ERA LADDER — correct answer is L=Y for every row
+    L=Y  U+0041   A               Unicode 1.0
+    L=Y  U+275D9  CJK Ext B       Unicode 3.1
+    L=Y  U+1E900  Adlam           Unicode 9.0
+    L=Y  U+3038E  CJK Ext G       Unicode 13.0
+    L=Y  U+31350  CJK Ext H       Unicode 15.1
+    L=Y  U+2EBF0  CJK Ext I       Unicode 15.1
+    L=Y  U+105C0  Todhri          Unicode 16.0
+    L=Y  U+16D40  Kirat Rai       Unicode 16.0
+    L=Y  U+323B0  CJK Ext J       Unicode 17.0
+    L=Y  U+16EAC  Beria Erfe      Unicode 17.0
+    L=Y  U+18DEF  Tangut-area     post-16.0 (node has it, deno does not)
+
+[2] UNASSIGNED — correct answer is L=n for every row
+    U+33480  L=n  just past CJK Ext J end (U+3347F)
+    U+16EE0  L=n  just past Beria Erfe end (U+16EDF)
+    U+18E00  L=n  just past U+18DFF
+    U+3FFFD  L=n  plane 3, unassigned
+    U+40000  L=n  plane 4, unassigned
+    U+50000  L=n  plane 5, unassigned
+
+[3] CASE MAPPING vs REGEXP TABLES — same runtime, two data sets
+    U+16EAC.toLowerCase() -> U+16EC7   [ICU case data: 17.0 present]
+    /\p{Lu}/u             -> true   [regexp tables: 17.0 present]
+    /\p{Script=Han}/u on U+323B0 -> true
+
+===== bun =====
+self-reported: unicode=15.1 icu=75.1
+
+[1] ERA LADDER — correct answer is L=Y for every row
+    L=Y  U+0041   A               Unicode 1.0
+    L=Y  U+275D9  CJK Ext B       Unicode 3.1
+    L=Y  U+1E900  Adlam           Unicode 9.0
+    L=Y  U+3038E  CJK Ext G       Unicode 13.0
+    L=Y  U+31350  CJK Ext H       Unicode 15.1
+    L=Y  U+2EBF0  CJK Ext I       Unicode 15.1
+    L=Y  U+105C0  Todhri          Unicode 16.0
+    L=Y  U+16D40  Kirat Rai       Unicode 16.0
+    L=Y  U+323B0  CJK Ext J       Unicode 17.0
+    L=Y  U+16EAC  Beria Erfe      Unicode 17.0
+    L=Y  U+18DEF  Tangut-area     post-16.0 (node has it, deno does not)
+
+[2] UNASSIGNED — correct answer is L=n for every row
+    U+33480  L=n  just past CJK Ext J end (U+3347F)
+    U+16EE0  L=n  just past Beria Erfe end (U+16EDF)
+    U+18E00  L=n  just past U+18DFF
+    U+3FFFD  L=n  plane 3, unassigned
+    U+40000  L=n  plane 4, unassigned
+    U+50000  L=n  plane 5, unassigned
+
+[3] CASE MAPPING vs REGEXP TABLES — same runtime, two data sets
+    U+16EAC.toLowerCase() -> U+16EAC   [ICU case data: pre-17.0]
+    /\p{Lu}/u             -> true   [regexp tables: 17.0 present]
+    /\p{Script=Han}/u on U+323B0 -> true
+
+===== deno =====
+self-reported: unicode=17.0 icu=78.3
+
+[1] ERA LADDER — correct answer is L=Y for every row
+    L=Y  U+0041   A               Unicode 1.0
+    L=Y  U+275D9  CJK Ext B       Unicode 3.1
+    L=Y  U+1E900  Adlam           Unicode 9.0
+    L=Y  U+3038E  CJK Ext G       Unicode 13.0
+    L=Y  U+31350  CJK Ext H       Unicode 15.1
+    L=Y  U+2EBF0  CJK Ext I       Unicode 15.1
+    L=Y  U+105C0  Todhri          Unicode 16.0
+    L=Y  U+16D40  Kirat Rai       Unicode 16.0
+    L=n <-- MISS  U+323B0  CJK Ext J       Unicode 17.0
+    L=n <-- MISS  U+16EAC  Beria Erfe      Unicode 17.0
+    L=n <-- MISS  U+18DEF  Tangut-area     post-16.0 (node has it, deno does not)
+
+[2] UNASSIGNED — correct answer is L=n for every row
+    U+33480  L=n  just past CJK Ext J end (U+3347F)
+    U+16EE0  L=n  just past Beria Erfe end (U+16EDF)
+    U+18E00  L=n  just past U+18DFF
+    U+3FFFD  L=n  plane 3, unassigned
+    U+40000  L=n  plane 4, unassigned
+    U+50000  L=n  plane 5, unassigned
+
+[3] CASE MAPPING vs REGEXP TABLES — same runtime, two data sets
+    U+16EAC.toLowerCase() -> U+16EAC   [ICU case data: pre-17.0]
+    /\p{Lu}/u             -> false   [regexp tables: pre-17.0]
+    /\p{Script=Han}/u on U+323B0 -> false
+

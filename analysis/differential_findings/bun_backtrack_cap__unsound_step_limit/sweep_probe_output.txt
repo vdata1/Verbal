@@ -1,0 +1,28 @@
+
+==============================================================================
+[2] /(a+)+$/ vs 'a'*n+'!'  [THE BUN QUESTION]
+expect: is bun exponential-with-a-better-constant, or genuinely not blowing up?
+
+-- node
+   band: n in [13, 23]  (floor 1.0ms, budget 2000ms)
+   points: (13, 1.13ms, False)  (14, 2.20ms, False)  (15, 4.34ms, False)  (16, 8.67ms, False)  (17, 17.32ms, False)  (18, 33.61ms, False)  (19, 68.49ms, False)  (20, 135.83ms, False)  (21, 272.32ms, False)  (22, 545.65ms, False)  (23, 1094.93ms, False)
+   exponential: base=1.991  R2=1.0000
+   polynomial:  k=12.08       R2=0.9929
+   VERDICT: EXPONENTIAL base 1.99  (R2 1.0000 vs poly 0.9929)
+
+-- bun
+   band: n in [17, 40]  (floor 1.0ms, budget 2000ms)
+   points: (17, 1.81ms, False)  (19, 7.17ms, False)  (21, 28.62ms, False)  (23, 111.91ms, False)  (25, 460.29ms, False)  (27, 673.55ms, False)  (29, 682.65ms, False)  (31, 669.53ms, False)  (33, 682.45ms, False)  (35, 684.18ms, False)  (37, 678.24ms, False)  (39, 672.45ms, False)  (40, 682.51ms, False)
+   exponential: base=1.243  R2=0.6658
+   polynomial:  k=6.39       R2=0.7671
+   KNEE at n=25: exponential base 2.00 (R2 1.0000) over n=17..25, then FLAT at ~678ms through n=40
+   VERDICT: EXPONENTIAL base 2.00 UP TO A CAP -- the engine stops searching, it does not stay fast
+
+-- deno
+   band: n in [14, 24]  (floor 1.0ms, budget 2000ms)
+   points: (14, 1.64ms, False)  (15, 3.45ms, False)  (16, 6.81ms, False)  (17, 13.55ms, False)  (18, 27.16ms, False)  (19, 52.70ms, False)  (20, 105.43ms, False)  (21, 215.11ms, False)  (22, 430.70ms, False)  (23, 866.86ms, False)  (24, 1744.87ms, False)
+   exponential: base=2.001  R2=1.0000
+   polynomial:  k=12.88       R2=0.9942
+   VERDICT: EXPONENTIAL base 2.00  (R2 1.0000 vs poly 0.9942)
+
+==============================================================================

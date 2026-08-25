@@ -1,0 +1,61 @@
+{"kind": "meta", "regex_id": "regex_9921", "api": "exec", "pattern": "\\p{Uppercase_Letter}", "flags": "u", "api_required_flags": "", "regex_requires_flags": "u", "flag_variants": ["u", "iu", "mu", "su"], "count": 60, "count_fuzz": 20, "count_chaos": 40, "provenance": {"git_commit": "d1f3125c84c1c81f43f55d20385a5c05f5890765", "config_sha": "04a28699a633d748d52433ff4cd285b881c674c46cb43ddb8b1c5d0d1d8afca3", "seed": 0, "corpus": "data/uniq-regexes-8.json", "corpus_sha": "999fe71e83f0db26931d6810164bff9efefdf3f6791d3444aa770ccdafe280e9", "resolved_config": {"seed": 0, "corpus": "data/uniq-regexes-8.json", "eval_slice": 10000, "matchall_k": 3, "pad_candidates": ["\n", " ", "\t", "X", "\u0000", " "], "flag_variants": ["", "i", "m", "s"], "chaos_n": 2, "chaos_ops": ["delete", "insert", "substitute", "duplicate", "transpose", "case_flip", "truncate"], "chaos_alphabet": ["a", "Z", "0", " ", "\n", "\u00e9", "\ud801\udc37"], "fuzz_n": 20, "fuzz_max_generations": 200, "fuzz_timeout_s": 30, "engines": ["node", "bun", "deno"]}}}
+{"kind": "string", "n": 0, "string": "\u2145", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 1, "string": "\ua660", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 2, "string": "\u1caa", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 3, "string": "\ud835\udf90", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 4, "string": "\u13e5", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 5, "string": "\ud835\udde3", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 6, "string": "\ud835\udc3e", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 7, "string": "\u1cb8", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 8, "string": "\ud835\udeb7", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 9, "string": "\u022e", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 10, "string": "\ud803\udd5e", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 11, "string": "\u2ceb", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 12, "string": "\u018e", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 13, "string": "\u00c2", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 14, "string": "\ud835\udc48", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 15, "string": "C", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 16, "string": "\u1e52", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 17, "string": "\ud835\udf22", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 18, "string": "\u0549", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 19, "string": "\ud835\uddea", "origin": "fuzz", "py_re_matches": 1}
+{"kind": "string", "n": 20, "string": "\u2145Z", "origin": "chaos", "seed_n": 0, "mutation": "insert@1", "py_re_matches": 2}
+{"kind": "string", "n": 21, "string": "Z", "origin": "chaos", "seed_n": 0, "mutation": "substitute@0", "py_re_matches": 1}
+{"kind": "string", "n": 22, "string": "0\ua660", "origin": "chaos", "seed_n": 1, "mutation": "insert@0", "py_re_matches": 1}
+{"kind": "string", "n": 23, "string": "\ua660\ua660", "origin": "chaos", "seed_n": 1, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 24, "string": "0", "origin": "chaos", "seed_n": 2, "mutation": "substitute@0", "py_re_matches": 0}
+{"kind": "string", "n": 25, "string": "\u10ea", "origin": "chaos", "seed_n": 2, "mutation": "case_flip@0", "py_re_matches": 0}
+{"kind": "string", "n": 26, "string": "", "origin": "chaos", "seed_n": 3, "mutation": "delete@0", "py_re_matches": 0}
+{"kind": "string", "n": 27, "string": "\n", "origin": "chaos", "seed_n": 3, "mutation": "substitute@0", "py_re_matches": 0}
+{"kind": "string", "n": 28, "string": "Z\u13e5", "origin": "chaos", "seed_n": 4, "mutation": "insert@0", "py_re_matches": 2}
+{"kind": "string", "n": 29, "string": " ", "origin": "chaos", "seed_n": 4, "mutation": "substitute@0", "py_re_matches": 0}
+{"kind": "string", "n": 30, "string": "a", "origin": "chaos", "seed_n": 5, "mutation": "substitute@0", "py_re_matches": 0}
+{"kind": "string", "n": 31, "string": " \ud835\udde3", "origin": "chaos", "seed_n": 5, "mutation": "insert@0", "py_re_matches": 1}
+{"kind": "string", "n": 32, "string": "\ud835\udc3e\ud835\udc3e", "origin": "chaos", "seed_n": 6, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 33, "string": "Z\ud835\udc3e", "origin": "chaos", "seed_n": 6, "mutation": "insert@0", "py_re_matches": 2}
+{"kind": "string", "n": 34, "string": "\u1cb8\u1cb8", "origin": "chaos", "seed_n": 7, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 35, "string": "\u1cb80", "origin": "chaos", "seed_n": 7, "mutation": "insert@1", "py_re_matches": 1}
+{"kind": "string", "n": 36, "string": "\ud835\udeb7 ", "origin": "chaos", "seed_n": 8, "mutation": "insert@1", "py_re_matches": 1}
+{"kind": "string", "n": 37, "string": "\ud835\udeb7\ud835\udeb7", "origin": "chaos", "seed_n": 8, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 38, "string": "\u022f", "origin": "chaos", "seed_n": 9, "mutation": "case_flip@0", "py_re_matches": 0}
+{"kind": "string", "n": 39, "string": "\u022e\u022e", "origin": "chaos", "seed_n": 9, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 40, "string": "\ud803\udd5e\ud803\udd5e", "origin": "chaos", "seed_n": 10, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 41, "string": "a\ud803\udd5e", "origin": "chaos", "seed_n": 10, "mutation": "insert@0", "py_re_matches": 1}
+{"kind": "string", "n": 42, "string": "\u2ceb\u2ceb", "origin": "chaos", "seed_n": 11, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 43, "string": "\u00e9\u2ceb", "origin": "chaos", "seed_n": 11, "mutation": "insert@0", "py_re_matches": 1}
+{"kind": "string", "n": 44, "string": "\u01dd", "origin": "chaos", "seed_n": 12, "mutation": "case_flip@0", "py_re_matches": 0}
+{"kind": "string", "n": 45, "string": "\u00e9", "origin": "chaos", "seed_n": 12, "mutation": "substitute@0", "py_re_matches": 0}
+{"kind": "string", "n": 46, "string": "\u00c2\ud801\udc37", "origin": "chaos", "seed_n": 13, "mutation": "insert@1", "py_re_matches": 1}
+{"kind": "string", "n": 47, "string": "0\u00c2", "origin": "chaos", "seed_n": 13, "mutation": "insert@0", "py_re_matches": 1}
+{"kind": "string", "n": 48, "string": "\ud835\udc48\ud835\udc48", "origin": "chaos", "seed_n": 14, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 49, "string": "\ud835\udc48\ud801\udc37", "origin": "chaos", "seed_n": 14, "mutation": "insert@1", "py_re_matches": 1}
+{"kind": "string", "n": 50, "string": "\u00e9C", "origin": "chaos", "seed_n": 15, "mutation": "insert@0", "py_re_matches": 1}
+{"kind": "string", "n": 51, "string": "c", "origin": "chaos", "seed_n": 15, "mutation": "case_flip@0", "py_re_matches": 0}
+{"kind": "string", "n": 52, "string": "\u1e52Z", "origin": "chaos", "seed_n": 16, "mutation": "insert@1", "py_re_matches": 2}
+{"kind": "string", "n": 53, "string": "\u1e52\u1e52", "origin": "chaos", "seed_n": 16, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 54, "string": "\ud835\udf22\ud835\udf22", "origin": "chaos", "seed_n": 17, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 55, "string": "\ud835\udf22\ud801\udc37", "origin": "chaos", "seed_n": 17, "mutation": "insert@1", "py_re_matches": 1}
+{"kind": "string", "n": 56, "string": "\u0579", "origin": "chaos", "seed_n": 18, "mutation": "case_flip@0", "py_re_matches": 0}
+{"kind": "string", "n": 57, "string": "\u0549\u0549", "origin": "chaos", "seed_n": 18, "mutation": "duplicate@0", "py_re_matches": 2}
+{"kind": "string", "n": 58, "string": "\ud835\uddea\u00e9", "origin": "chaos", "seed_n": 19, "mutation": "insert@1", "py_re_matches": 1}
+{"kind": "string", "n": 59, "string": "\ud835\uddea\ud835\uddea", "origin": "chaos", "seed_n": 19, "mutation": "duplicate@0", "py_re_matches": 2}

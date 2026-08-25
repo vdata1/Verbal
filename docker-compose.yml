@@ -1,0 +1,33 @@
+# One service, all three engines inside it. Python drives node/bun/deno as
+# in-process subprocesses -- the container is the isolation + reproducibility
+# boundary, not a per-engine sandbox.
+services:
+  verbal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Source commit for provenance, taken from the environment (empty if unset,
+        # which records "unknown" honestly). Use `docker/build.sh` to fill it
+        # automatically, or run: GIT_COMMIT=$(git rev-parse HEAD) docker compose build
+        GIT_COMMIT: "${GIT_COMMIT:-}"
+      # Uncomment to re-pin engines at build time (defaults live in the Dockerfile):
+      # args:
+      #   NODE_VERSION: "26.5.0"
+      #   BUN_VERSION: "1.3.14"
+      #   DENO_VERSION: "2.9.1"
+    image: verbal:latest
+    container_name: verbal
+    working_dir: /app
+    volumes:
+      # Outputs persist to the host (results/ is huge + regenerable; never baked in).
+      - ./results:/app/results
+      - ./results-archive:/app/results-archive
+      # Corpora mounted read-only so you can swap inputs without a rebuild. The
+      # image also bakes data/ in, so bare `docker run` (no mount) still works.
+      - ./data:/app/data:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+    command: /bin/bash

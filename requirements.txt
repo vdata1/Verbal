@@ -1,0 +1,20 @@
+# Verbal pipeline Python dependencies.
+#
+# Fandango is not on PyPI: it is the fork at
+# github.com/reallyTG/fandango-slight-change, cloned into ./fandango and installed
+# from there NON-editable (the fork uses scikit-build-core, whose editable mode
+# needs extra config and buys nothing):
+#   git clone https://github.com/reallyTG/fandango-slight-change.git ./fandango
+#   pip install ./fandango
+# Both install paths do exactly this -- Dockerfile lines 76-77 and lxc_provision.sh.
+# Verified version at build time: fandango 1.1.1. Requires Python >= 3.11.
+#
+# Reproducibility note: the node/bun/deno engine versions are NOT Python deps but
+# are part of the experimental environment. The canonical pins are the versions
+# that produced the recorded results (results/eval_headline.json):
+#   node v26.5.0, bun 1.3.14, deno 2.9.1
+# The Docker image installs exactly these and verifies them at container start
+# (docker/assert_engine_versions.py). Outside Docker they are only PATH lookups,
+# so bare-metal runs must ensure these versions are first on PATH.
+
+PyYAML==6.0.3

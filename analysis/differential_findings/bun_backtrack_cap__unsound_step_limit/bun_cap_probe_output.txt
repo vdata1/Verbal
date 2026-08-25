@@ -1,0 +1,31 @@
+regex /(a+)+$/  vs  'a'*n + '!aaa'
+correct answer is TRUE for every n (the trailing 'aaa' matches $)
+
+   n |                   node |                    bun |                   deno
+------------------------------------------------------------------------------
+   5 |       0.05ms  True       |       0.05ms  True       |       0.03ms  True      
+  10 |       0.18ms  True       |       0.07ms  True       |       0.13ms  True      
+  15 |       4.35ms  True       |       0.50ms  True       |       3.46ms  True      
+  20 |     137.93ms  True       |      14.26ms  True       |     108.83ms  True      
+  22 |     552.00ms  True       |      56.74ms  True       |     435.33ms  True      
+  24 |    2183.56ms  True       |     227.03ms  True       |    1744.53ms  True      
+  26 |    8813.52ms  True       |     679.00ms False  <<< WRONG |    6977.64ms  True      
+  28 |           TIMEOUT >25s |     679.30ms False  <<< WRONG |           TIMEOUT >25s
+  30 |           TIMEOUT >25s |     683.14ms False  <<< WRONG |           TIMEOUT >25s
+  34 |           TIMEOUT >25s |     673.00ms False  <<< WRONG |           TIMEOUT >25s
+  40 |           TIMEOUT >25s |     685.75ms False  <<< WRONG |           TIMEOUT >25s
+  60 |           TIMEOUT >25s |     675.40ms False  <<< WRONG |           TIMEOUT >25s
+ 100 |           TIMEOUT >25s |     671.40ms False  <<< WRONG |           TIMEOUT >25s
+
+!!! UNSOUND CAP -- an engine reported a WRONG value, fast:
+      bun n=26: returned False in 679.0ms; correct answer is True
+      bun n=28: returned False in 679.3ms; correct answer is True
+      bun n=30: returned False in 683.1ms; correct answer is True
+      bun n=34: returned False in 673.0ms; correct answer is True
+      bun n=40: returned False in 685.7ms; correct answer is True
+      bun n=60: returned False in 675.4ms; correct answer is True
+      bun n=100: returned False in 671.4ms; correct answer is True
+
+    This is a VALUE discrepancy, not a timing one. An engine that abandons
+    a backtracking search and reports 'no match' is not slow -- it is wrong,
+    and it is wrong in the one direction a timing oracle cannot see.

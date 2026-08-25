@@ -1,0 +1,23 @@
+# Fast config for the new-pipeline smoke test (tests/new_pipeline_smoke.sh).
+# Same schema as default.yaml; only the fuzzing budget and slice are shrunk so the
+# end-to-end gate runs quickly. NOT for producing eval numbers -- use default.yaml.
+seed: 0
+corpus: data/uniq-regexes-sample.json
+eval_slice: 3
+matchall_k: 3
+pad_candidates: ["\n", " ", "\t", "X", "\0", " "]
+# Smaller variant set to keep the smoke gate fast (base + one toggle).
+flag_variants: ["", "i"]
+# --- Chaos (see default.yaml) ------------------------------------------------
+# 1 mutant per string keeps the smoke gate fast while still exercising the path.
+chaos_n: 1
+chaos_ops: [delete, insert, substitute, duplicate, transpose, case_flip, truncate]
+chaos_alphabet: ["a", "Z", "0", " ", "\n", "é", "𐐷"]
+
+fuzz_n: 3
+fuzz_max_generations: 40
+fuzz_timeout_s: 6
+neutral_count_timeout_s: 6   # py-re neutral-oracle budget per (regex, api) batch
+redos_slow_ms: 1000          # in-harness exec_ms above which a case is a ReDoS candidate
+redos_engine_ratio: 10.0     # slowest/fastest engine factor = engine-specific
+engines: [node, bun, deno]

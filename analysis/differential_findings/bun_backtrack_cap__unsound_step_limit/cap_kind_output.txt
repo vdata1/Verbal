@@ -1,0 +1,23 @@
+bun plateau on /(a+)+$/ vs 'a'*n+'!'   (the ~676ms cap)
+  n=24:    230.4ms  value=False
+  n=26:    686.1ms  value=False
+  n=28:    685.7ms  value=False
+  n=32:    675.0ms  value=False
+  n=40:    677.0ms  value=False
+
+bun plateau on regex_3910 -- 'l'+'e'*n+'_#}]'   (a much costlier inner loop)
+  n=24:    299.4ms  value=False
+  n=26:   1203.2ms  value=False
+  n=28:   1781.5ms  value=False
+  n=30:   1808.2ms  value=False
+  n=32:   1779.6ms  value=False
+  n=34:   1781.5ms  value=False
+  n=36:   1774.5ms  value=False
+  n=38:   1781.7ms  value=False
+  n=40:   1783.3ms  value=False
+  n=42:   1757.0ms  value=False
+  n=44:   1783.1ms  value=False
+
+Different plateaus => the budget is in STEPS, not milliseconds => the crossover
+n and the wrong value are host-independent and reproducible from provenance;
+only the plateau's wall-clock is a property of this host.

@@ -1,0 +1,5494 @@
+{
+  "regex_id": "regex_9921",
+  "api": "exec",
+  "pattern": "\\p{Uppercase_Letter}",
+  "engine_versions": {
+    "node": "v26.5.0",
+    "bun": "1.3.14",
+    "deno": "deno 2.9.1 (stable, release, x86_64-unknown-linux-gnu)"
+  },
+  "provenance": {
+    "git_commit": "8dc8b1d3df8b1ea648b30d81a458e9014dd4c48a",
+    "config_sha": "d769e16a7cda2f6d72eb588b3dd1b24c8759cce2d09f453fd00753e4632790bd",
+    "seed": 0,
+    "corpus": "data/uniq-regexes-8.json",
+    "corpus_sha": "999fe71e83f0db26931d6810164bff9efefdf3f6791d3444aa770ccdafe280e9",
+    "resolved_config": {
+      "seed": 0,
+      "corpus": "data/uniq-regexes-8.json",
+      "eval_slice": 10000,
+      "matchall_k": 3,
+      "pad_candidates": [
+        "\n",
+        " ",
+        "\t",
+        "X",
+        "\u0000",
+        " "
+      ],
+      "flag_variants": [
+        "",
+        "i",
+        "m",
+        "s"
+      ],
+      "fuzz_n": 20,
+      "fuzz_max_generations": 200,
+      "fuzz_timeout_s": 30,
+      "engines": [
+        "node",
+        "bun",
+        "deno"
+      ]
+    }
+  },
+  "num_strings": 20,
+  "flag_variants": [
+    "u",
+    "iu",
+    "mu",
+    "su"
+  ],
+  "results": [
+    {
+      "n": 0,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 0,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 0,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 0,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2145\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2145",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2145\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 1,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 1,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 1,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 1,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ua660\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ua660",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ua660\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 2,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 2,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 2,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 2,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1caa\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1caa",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1caa\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 3,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 3,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 3,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 3,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf90\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf90",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf90\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 4,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 4,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 4,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 4,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u13e5\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u13e5",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u13e5\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 5,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 5,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 5,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 5,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udde3\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udde3",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udde3\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 6,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 6,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 6,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 6,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc3e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc3e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc3e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 7,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 7,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 7,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 7,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1cb8\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1cb8",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1cb8\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 8,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 8,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 8,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 8,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udeb7\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udeb7",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udeb7\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 9,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 9,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 9,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 9,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u022e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u022e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u022e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 10,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 10,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 10,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 10,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud803\udd5e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud803\udd5e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud803\\udd5e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 11,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 11,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 11,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 11,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u2ceb\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u2ceb",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u2ceb\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 12,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 12,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 12,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 12,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u018e\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u018e",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u018e\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 13,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 13,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 13,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 13,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u00c2\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u00c2",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u00c2\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 14,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 14,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 14,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 14,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udc48\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udc48",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udc48\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 15,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 15,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 15,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 15,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"C\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "C",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"C\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 16,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 16,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 16,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 16,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u1e52\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u1e52",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u1e52\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 17,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 17,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 17,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 17,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\udf22\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\udf22",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\udf22\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 18,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 18,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 18,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 18,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\u0549\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\u0549",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\u0549\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 19,
+      "flags": "u",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 19,
+      "flags": "iu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 19,
+      "flags": "mu",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        }
+      }
+    },
+    {
+      "n": 19,
+      "flags": "su",
+      "value_discrepancy": false,
+      "any_defect": false,
+      "distinct_values": [
+        "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}"
+      ],
+      "runs": {
+        "node": {
+          "engine": "node",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        },
+        "bun": {
+          "engine": "bun",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        },
+        "deno": {
+          "engine": "deno",
+          "exit": 0,
+          "timed_out": false,
+          "stdout": "{\"api\":\"exec\",\"regex_id\":\"regex_9921\",\"ok\":true,\"value\":{\"match\":\"\ud835\uddea\",\"groups\":[],\"index\":0}}\n",
+          "stderr": "",
+          "canonical": {
+            "api": "exec",
+            "regex_id": "regex_9921",
+            "ok": true,
+            "value": {
+              "match": "\ud835\uddea",
+              "groups": [],
+              "index": 0
+            }
+          },
+          "comparable": "{\"ok\": true, \"value\": {\"groups\": [], \"index\": 0, \"match\": \"\\ud835\\uddea\"}}",
+          "defect": false
+        }
+      }
+    }
+  ]
+}

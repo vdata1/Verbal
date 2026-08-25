@@ -1,0 +1,21 @@
+{"kind": "meta", "regex_id": "regex_9921", "api": "matchAll", "pattern": "\\p{Uppercase_Letter}", "flags": "gu", "api_required_flags": "g", "regex_requires_flags": "u", "flag_variants": ["gu", "giu", "gmu", "gsu"], "count": 20, "provenance": {"git_commit": "8dc8b1d3df8b1ea648b30d81a458e9014dd4c48a", "config_sha": "d769e16a7cda2f6d72eb588b3dd1b24c8759cce2d09f453fd00753e4632790bd", "seed": 0, "corpus": "data/uniq-regexes-8.json", "corpus_sha": "999fe71e83f0db26931d6810164bff9efefdf3f6791d3444aa770ccdafe280e9", "resolved_config": {"seed": 0, "corpus": "data/uniq-regexes-8.json", "eval_slice": 10000, "matchall_k": 3, "pad_candidates": ["\n", " ", "\t", "X", "\u0000", " "], "flag_variants": ["", "i", "m", "s"], "fuzz_n": 20, "fuzz_max_generations": 200, "fuzz_timeout_s": 30, "engines": ["node", "bun", "deno"]}}}
+{"kind": "string", "n": 0, "string": "\n\ua660\n\u2ceb\n\u0403\n", "py_re_matches": 3}
+{"kind": "string", "n": 1, "string": "\n\ud835\udc3e\n\ud835\udcab\n\ud801\udc0b\n", "py_re_matches": 3}
+{"kind": "string", "n": 2, "string": "\n\ud835\udef7\n\ud83a\udd17\n", "py_re_matches": 2}
+{"kind": "string", "n": 3, "string": "\n\ud803\udca2\n\u10bf\n\ud83a\udd1a\n", "py_re_matches": 3}
+{"kind": "string", "n": 4, "string": "\n\u01d9\n\ua680\n", "py_re_matches": 2}
+{"kind": "string", "n": 5, "string": "\n\ua7da\n\u13f1\n", "py_re_matches": 2}
+{"kind": "string", "n": 6, "string": "\n\u04c3\n\ud806\udcb9\n\u03de\n", "py_re_matches": 3}
+{"kind": "string", "n": 7, "string": "\n\ua7dc\n\ua79a\n", "py_re_matches": 2}
+{"kind": "string", "n": 8, "string": "\n\ud81b\ude41\n\u1ebc\n\ud803\udcac\n", "py_re_matches": 3}
+{"kind": "string", "n": 9, "string": "\n\u0546\n\u018e\n", "py_re_matches": 2}
+{"kind": "string", "n": 10, "string": "\n\ud83a\udd0b\n\u03a7\n", "py_re_matches": 2}
+{"kind": "string", "n": 11, "string": "\n\u0395\n\u04c7\n", "py_re_matches": 2}
+{"kind": "string", "n": 12, "string": "\n\u2c08\n\u01af\n", "py_re_matches": 2}
+{"kind": "string", "n": 13, "string": "\n\ud801\udd7a\n\u1ec2\n", "py_re_matches": 2}
+{"kind": "string", "n": 14, "string": "\n\ud835\udd6d\n\u1e78\n", "py_re_matches": 2}
+{"kind": "string", "n": 15, "string": "\n\ud81b\udeac\n\u1cba\n\u0420\n", "py_re_matches": 3}
+{"kind": "string", "n": 16, "string": "\n\u13e3\n\ud803\udc83\n", "py_re_matches": 2}
+{"kind": "string", "n": 17, "string": "\n\u2124\n\ud835\udc16\n", "py_re_matches": 2}
+{"kind": "string", "n": 18, "string": "\n\ud801\udc1c\n\ud801\udc1b\n\u2c62\n", "py_re_matches": 3}
+{"kind": "string", "n": 19, "string": "\n\ud801\udc0e\n\u1e34\n\ud835\udf2c\n", "py_re_matches": 3}
