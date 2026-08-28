@@ -3,7 +3,7 @@
 Turns a regex into ONE clean, mutation-free base ``.fan`` (grammar + the
 constraints the transpiler emits for lookaround / backreferences). This is the
 starting point every per-API specialization builds on; it must not bake in any
-API-specific or mutation behavior (settled design 2026-07-06).
+API-specific or mutation behavior.
 
 Thin wrapper over the reused transpiler core
 (``regex_fandango_transpiler.RegexToFandangoTranslator``). The transpiler owns

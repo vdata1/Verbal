@@ -1,13 +1,13 @@
 #!/bin/sh
-# Build the Verbal image with the source commit baked in for provenance.
+# Build the image with the source commit baked in for provenance.
 #
-# The repo's .git is excluded from the image (see .dockerignore), so `git` can't run
-# inside the container. This wrapper captures the REAL host commit (+ -dirty marker)
-# at build time and passes it as the GIT_COMMIT build arg, so provenance records the
-# exact code the image was built from instead of "unknown". Any extra args are
-# forwarded to `docker compose build` (e.g. --no-cache).
+# The repo's .git is excluded from the image, so `git` cannot run inside the
+# container. This wrapper captures the host commit (plus a -dirty marker) at build
+# time and passes it as the GIT_COMMIT build arg, so provenance records the exact
+# code the image was built from instead of "unknown". Extra args are forwarded to
+# `docker build` (e.g. --no-cache).
 #
-# Usage:  ./docker/build.sh [extra docker-compose build args]
+# Usage:  ./docker/build.sh [extra docker build args]
 set -e
 
 # Resolve repo root from this script's location so it works from any CWD.
@@ -25,4 +25,4 @@ else
 fi
 
 echo "baking GIT_COMMIT=${COMMIT:-<empty>}"
-GIT_COMMIT="$COMMIT" docker compose build "$@"
+docker build --build-arg GIT_COMMIT="$COMMIT" -t verbal:latest "$@" .

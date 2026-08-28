@@ -72,7 +72,7 @@ ENGINE_CMD = {
 # Per-engine environment overlay, empty for the three real engines. It exists so an
 # engine can be defined by an ENV VAR rather than an argv flag: JavaScriptCore's tier
 # control is `BUN_JSC_useRegExpJIT=0`, with no command-line equivalent, and the
-# JIT-vs-interpreter differential (analysis/eval_help_scripts/tier_diff.py) registers
+# A JIT-vs-interpreter differential registers
 # such variants as ordinary pseudo-engines so every existing code path applies unchanged.
 ENGINE_ENV: dict[str, dict[str, str]] = {}
 # Per-harness wall-clock budget. A harness is a tiny synchronous script, so blowing
@@ -615,8 +615,7 @@ def _load_run_record(path: str) -> dict:
             f"no run record for this window: {path}\n"
             f"available records in {paths.RESULTS_DIR}:\n{listing}\n"
             f"Pass --start/--limit matching a record above, or point at one with "
-            f"--record PATH. To rebuild a lost record from on-disk artifacts, see "
-            f"analysis/eval_help_scripts/artifacts_to_run_record.py."
+            f"--record PATH."
         )
 
 
@@ -671,13 +670,12 @@ def run_eval(config: Config, generate: bool = True, limit: int | None = None,
     # Provenance + engine versions computed ONCE (provenance() shells out to git;
     # per-artifact would be thousands of subprocesses, and workers must not call git).
     #
-    # Chunk context is a GENERATION fact, so the eval must not claim one -- and clearing
-    # it is load-bearing for `--resume`, not tidiness. `generate_all` above declares the
-    # window it generated, so without this an in-process generate+eval run would stamp
-    # chunk_start/chunk_count into every diff.json, while a later `--skip-generate
-    # --resume` (the normal way scoped_run.sh evaluates) computes provenance with them
-    # null. `_load_valid_diff` compares provenance WHOLE, so every unit would miss the
-    # cache and silently recompute the entire window -- hours of engine execution
+    # Chunk context is a generation fact, so the eval must not claim one. Clearing it
+    # is load-bearing for `--resume`: `generate_all` declares the window it generated,
+    # so without this an in-process generate+eval run would stamp chunk_start/count
+    # into every diff.json while a later `--skip-generate --resume` computes provenance
+    # with them null. `_load_valid_diff` compares provenance whole, so every unit would
+    # miss the cache and silently recompute the window -- hours of engine execution
     # presenting itself as a successful resume.
     clear_chunk_context()
     prov = provenance(config)

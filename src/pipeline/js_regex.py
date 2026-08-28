@@ -10,9 +10,9 @@ regex dialect. To keep the experiment honest we distinguish two failure kinds:
 
 Validity is judged by NODE as the reference JS parser, under each pattern's
 construction-affecting flags -- the ``/u`` a ``\p{...}``/``\u{...}`` pattern requires,
-which the harness carries and which tightens escape rules (``js_construction_flags``;
-EXPERIMENT_GAPS G1). Construction-level disagreements between engines are a separate
-phenomenon, out of scope for this gate.
+which the harness carries and which tightens escape rules
+(``js_construction_flags``). Construction-level disagreements between engines are a
+separate phenomenon, out of scope for this gate.
 
 Fail loud: if node is missing or the probe fails, we raise -- we cannot scope the
 experiment without the reference parser, and silently treating everything as
@@ -39,7 +39,7 @@ def classify_js(patterns: list[str], flags: list[str] | None = None) -> list[dic
     Each pattern is validated under its construction-affecting flags ``flags[i]`` --
     the flags the harness will actually carry (in practice ``""`` or ``"u"``; see
     ``regex_facts.js_construction_flags``), so a pattern that requires ``/u`` is judged
-    under ``/u`` where escape rules are stricter (EXPERIMENT_GAPS G1). ``flags=None``
+    under ``/u`` where escape rules are stricter. ``flags=None``
     validates every pattern flagless -- the legacy behavior, kept for callers that do
     not specialize.
 

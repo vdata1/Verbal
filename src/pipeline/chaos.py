@@ -1,6 +1,6 @@
 r"""Stage 3b -- chaos: boundary inputs by mutating a generated matching string.
 
-Why this exists (``analysis/EXPERIMENT_GAPS.md`` G7): Stage 2 builds a grammar OF
+Why this exists: Stage 2 builds a grammar OF
 THE REGEX'S LANGUAGE and Stage 3 samples it, so every generated string is a
 positive example by construction -- measured at 98.5% over the 6000-9999 window.
 Both bugs found so far live just OUTSIDE that language: ``regex_5354`` (bun anchor)
@@ -19,7 +19,7 @@ Which side of the boundary each mutant landed on is *measured*, not assumed:
 Stage 3 records ``py_re_matches`` per string exactly as it does for fuzz strings,
 and every record carries ``origin`` so the two populations are never conflated.
 
-Uniform (CLAUDE.md cardinal rule): the same op set and selection rule apply to
+Uniform: the same op set and selection rule apply to
 every regex and every API. Nothing here branches on a regex id or an api name.
 
 Determinism and provenance: mutants are drawn from a caller-supplied

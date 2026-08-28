@@ -1,0 +1,53 @@
+# Configuration for the results reported in the paper.
+#
+# Every value is applied uniformly to every regex and API; nothing keys on a
+# specific regex id or API name. The resolved contents of this file are hashed
+# into each artifact's provenance header (config_sha), and the corpus is hashed
+# into corpus_sha.
+
+# The single experiment seed, threaded into Fandango's random_seed and into
+# Python's random at pipeline entry.
+seed: 0
+
+# Corpus. Accepts a JSON array of pattern strings or JSONL rows with a
+# "pattern" field.
+corpus: data/paper_eval_set_patterns.json
+# Default window size; override at launch with --limit N.
+eval_slice: 10000
+
+# Upper bound K for the matchAll `<start> ::= <pad> (<m> <pad>){2,K}` rewrite.
+matchall_k: 3
+# Candidate filler characters, tried in order.
+pad_candidates: ["\n", " ", "\t", "X", "\0", " "]
+
+# Flag sets unioned onto the mandatory base (API-required plus regex-required).
+# The base is always tested. `v` supersedes a required `u` rather than unioning
+# with it, since `uv` is a SyntaxError on every engine.
+flag_variants: ["", "i", "m", "s", "y", "d", "g", "v"]
+
+# Each generated string is perturbed chaos_n times and the mutants are tested as
+# ordinary cases, reaching boundary inputs the grammar cannot produce. Harness
+# count is ~(1 + chaos_n)x. 0 disables.
+chaos_n: 2
+chaos_ops: [delete, insert, substitute, duplicate, transpose, case_flip, truncate]
+chaos_alphabet: ["a", "Z", "0", " ", "\n", "é", "𐐷"]
+
+fuzz_n: 20                 # desired_solutions per specialized .fan
+fuzz_max_generations: 200  # max_generations passed to fuzz()
+fuzz_timeout_s: 30         # wall-clock budget per .fan
+
+# Wall-clock budget for counting py_re_matches over one (regex, api) batch.
+# Python `re` has no timeout and backtracks catastrophically on nested
+# quantifiers. On expiry the counting child is killed and unmeasured strings
+# record py_re_matches: null (unknown, not 0).
+neutral_count_timeout_s: 30
+
+# A case is a ReDoS candidate if in-harness exec_ms exceeds redos_slow_ms on any
+# engine, or if any engine hit the harness timeout. Candidates are re-executed
+# serially and unloaded afterwards, and kept only if still slow; a confirmed case
+# is engine-specific when slowest/fastest across engines >= redos_engine_ratio.
+# This measures engine-specific slowness, not proven superlinear blowup.
+redos_slow_ms: 1000
+redos_engine_ratio: 10.0
+
+engines: [node, bun, deno]

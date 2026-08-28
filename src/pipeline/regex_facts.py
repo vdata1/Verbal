@@ -3,7 +3,7 @@ r"""Stage 1 analysis -- per-regex *facts* derived once from the pattern.
 These are properties of the regex itself (not of any API), computed a single time
 in the base-spec stage and threaded to specialization + harness synthesis so no
 downstream stage has to re-derive them (and so they are recorded as first-class,
-machine-readable metadata rather than folded into a bool). See CLAUDE.md
+machine-readable metadata rather than folded into a bool). See
 ("configuration over code", "separate testable units").
 
 Two facts today, both structural (from ``sre_parse`` -- the same parser the
@@ -13,7 +13,7 @@ never mis-read by a string heuristic):
 - ``anchored_single_match`` -- the regex can match at most once in any string
   (every top-level alternative is anchored to the string start OR every one to the
   end). Used by the specializer to skip the >=2-match rewrite for matchAll
-  (otherwise it emits padded copies that never match -- Bug A, 2026-07-07 scan).
+  (otherwise it emits padded copies that never match).
 
 - ``requires_flags`` -- the JS flags the pattern *requires* to be matchable /
   meaningful AT ALL, as opposed to ``ApiDescriptor.required_flags`` (the flags an
@@ -99,7 +99,7 @@ def js_construction_flags(pattern: str) -> str:
     (:func:`_requires_u`). So the validity gate must test a pattern under ``u`` iff it
     requires it: otherwise the gate admits it flagless while the specializer runs it
     under ``/u``, where it throws ``SyntaxError`` on every engine and is silently
-    recorded ``ok`` (EXPERIMENT_GAPS G1). This is the ``u``-only slice of
+    recorded ``ok``. This is the ``u``-only slice of
     :func:`effective_flags` -- the only part that gates construction.
 
     ``v`` is deliberately NOT consulted, even though it gates construction too and is

@@ -4,9 +4,9 @@ Realizes the descriptor's declarative knobs (``min_matches``, ``filler_between``
 ``groups_must_participate``, ``extra_constraints``/``extra_helpers``) as uniform
 grammar + constraint edits. The core here NEVER branches on ``descriptor.api`` or
 on a regex id -- every difference between APIs flows through descriptor *data*,
-and every regex is treated by the same code path (CLAUDE.md cardinal rule).
+and every regex is treated by the same code path.
 
-Realization (settled 2026-07-06, syntax validated by fuzzing before this module
+Realization (syntax validated by fuzzing before this module
 was written):
 
 - ``min_matches == 1`` -> no grammar rewrite; base already yields one match.
@@ -22,7 +22,7 @@ was written):
   real correctness guarantee and we do NOT hard-filter by an engine match count.
 - Degenerate regex (matches every candidate -> no non-matching pad exists, e.g.
   ``[\s\S]+``): a >=2-separated-match string is impossible. Human decision
-  (2026-07-06): accept 1 match. We skip the rewrite and RECORD it -- a uniform
+  accept 1 match. The rewrite is skipped and RECORDED -- a uniform
   classification by the same test for every regex, not per-instance special-casing.
 - ``groups_must_participate`` -> append ``where <rN> != ""`` for each capture-group
   rule (from the base spec's ``capture_group_rules`` meta).
@@ -102,7 +102,7 @@ def _preserved_prelude_lines(prelude: str) -> list[str]:
 
 
 def select_pad(pattern: str, candidates: tuple[str, ...]) -> str | None:
-    """First candidate the regex cannot match, or None (degenerate: matches all).
+    r"""First candidate the regex cannot match, or None (degenerate: matches all).
 
     Normalize via ``normalize_js_regex`` before compiling under Python ``re``: the
     transpiler accepts JS escapes (``\\u{...}``, ``\A``/``\Z``/``\z``) that raw ``re``
@@ -168,7 +168,7 @@ def specialize(base_fan: str, pattern: str, descriptor: ApiDescriptor, config: C
     # --- min_matches realization -------------------------------------------
     if descriptor.min_matches > 1 and facts.anchored_single_match:
         # Fully-anchored regex: can match at most once, so the >=2-match rewrite
-        # would emit padded copies that never match (Bug A, 2026-07-07 scan). Same
+        # would emit padded copies that never match. Same
         # uniform fallback as `degenerate` below (human-approved: accept 1 match),
         # but recorded as its OWN fact so the run record distinguishes the two.
         anchored_single_match = True

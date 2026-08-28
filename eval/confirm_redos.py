@@ -3,15 +3,15 @@
 ``run_eval.py --redos-defer`` nominates slow cases under pool load and writes them to
 ``results/redos_queue_<window>.json`` WITHOUT measuring them. This script is the other
 half: it re-executes those nominations serially on a quiet box and emits a verdict
-artifact in the SAME schema ``run_eval.py`` writes inline, so
-``analysis/eval_help_scripts/dedupe_headline.py --redos`` consumes either one unchanged.
+artifact in the SAME schema ``run_eval.py`` writes inline, so downstream consumers
+read either one unchanged.
 
 Why it is a separate program, and why it is deliberately slow:
 
 - **Serial is the point, not a limitation.** A nomination is a reading taken while 32
   workers saturated the cores; it is inflated by an unknown factor. Only an unloaded
   re-run measures. Running the confirm itself in parallel would reintroduce exactly the
-  contention that made the nomination untrustworthy. To go faster, sha the queue across
+  contention that made the nomination untrustworthy. To go faster, shard the queue across
   BOXES (``--shard i/N``), never across cores of one box.
 - **It runs off the INLINED harness source.** ``run_eval._diff_one`` re-executes
   ``results/<rid>/<api>__<n>__<flags>.js`` off disk, so a queue of bare pointers is only
@@ -59,6 +59,7 @@ import argparse
 import glob
 import json
 import os
+import hashlib
 import platform
 import socket
 import sys
@@ -101,7 +102,10 @@ def _box() -> dict:
     except AttributeError:
         cpus = str(os.cpu_count())
     return {
-        "hostname": socket.gethostname(),
+        # A stable per-machine tag rather than the hostname itself: merging shards only
+        # needs to tell boxes apart, and the artifact should not carry machine names.
+        "hostname": "box_" + hashlib.sha256(
+            socket.gethostname().encode("utf-8")).hexdigest()[:8],
         "platform": platform.platform(),
         "python": platform.python_version(),
         "cpus": cpus,
@@ -198,9 +202,9 @@ def _assemble(queue: dict, records: list, shard: tuple[int, int] | None,
     """Build the redos_<window>.json artifact from accumulated verdicts.
 
     Emits ``run_eval``'s report schema verbatim -- ``confirmed`` carries only the
-    confirmed entries, with ``load_artifacts``/``unmeasured`` as counts -- so
-    ``dedupe_headline.py --redos`` needs no change. The extra keys (``verdicts``,
-    ``confirm_box``, ``shard``) are additive; that consumer reads by key.
+    confirmed entries, with ``load_artifacts``/``unmeasured`` as counts -- so a
+    downstream consumer needs no change. The extra keys (``verdicts``,
+    ``confirm_box``, ``shard``) are additive and read by key.
     """
     confirmed = [{k: v for k, v in r.items() if k != "verdict"}
                  for r in records if r["verdict"] == "confirmed"]

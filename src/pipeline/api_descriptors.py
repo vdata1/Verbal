@@ -124,7 +124,7 @@ __ORACLE__
 
 # Fixed, uniform batteries (same for every regex). Tokens/limits that don't apply
 # to a given regex still run -- engines must agree on those too (settled doc).
-# The ambiguous tokens are where engines actually differ (EXPERIMENT_GAPS expansion):
+# The ambiguous tokens are where engines actually differ:
 # $12 with <2 groups ($1 then "2", or group 12?), $0 (not special), $99 (no such
 # group), $<nosuchname> (empty vs literal), $<> (empty name), and a dangling $ (literal).
 _REPLACE_TOKENS = ["[$&]", "[$`]", "[$']", "[$$]", "[$1]", "[$<name>]",
@@ -133,26 +133,23 @@ _REPLACE_TOKENS = ["[$&]", "[$`]", "[$']", "[$$]", "[$1]", "[$<name>]",
 # farm: -1 -> 4294967295 (unlimited), 2**32 -> 0 (returns []), 2**32-1, 1.5 -> 1,
 # NaN -> 0, "2" -> 2. Keys are `limit_<String(L)>`, all distinct, insertion-ordered.
 _SPLIT_LIMITS_JS = '[undefined, 0, 1, 1000000, -1, 2**32, 2**32 - 1, 1.5, NaN, "2"]'
-# lastIndex presets for a STATEFUL (`g`/`y`) regex, as a JS expression over the input
-# `s` so one uniform rule scales to any string length: start, just-past-start, middle,
-# exactly-at-end, and PAST the end (the spec edge -- no match, and lastIndex resets to
-# 0). Under g/y, `lastIndex` is where the next match STARTS, so it is an input the
-# harness controls, and every run before this one left it at 0: one point of an axis.
+# lastIndex presets for a stateful (`g`/`y`) regex, as a JS expression over the input
+# `s` so one rule scales to any length: start, just past start, middle, exactly at the
+# end, and past the end (the spec edge, where there is no match and lastIndex resets
+# to 0). Under g/y, lastIndex is where the next match starts, making it an input the
+# harness controls rather than a constant 0.
 #
-# `presetBattery` (in the skeleton) records the outcome AND the lastIndex the call left
-# behind. The second half is the real point -- it is the only way to observe laws about
-# state AFTER the call, which no cross-engine value comparison can reach:
-#   * `Symbol.search` must SAVE AND RESTORE lastIndex (so it still equals the preset,
-#     while the returned index never moves) -- a documented divergence area;
-#   * `Symbol.match` with `g` must RESET lastIndex to 0 before collecting.
-# Applied to the read-only APIs only (exec/test/matchAll/match/search).
-# replace/replaceAll own a per-token reset and split never touches lastIndex at all
-# (`Symbol.split` uses an internal clone); all three already carry their own batteries,
-# which presets would cross-multiply for no additional law.
+# `presetBattery` records both the outcome and the lastIndex the call left behind.
+# The latter is the point: it is the only way to observe laws about state after the
+# call, which no value comparison can reach --
+#   * `Symbol.search` must save and restore lastIndex;
+#   * `Symbol.match` with `g` must reset lastIndex to 0 before collecting.
+# Applied to the read-only APIs only. replace/replaceAll own a per-token reset and
+# split never touches lastIndex (`Symbol.split` uses an internal clone); all three
+# carry their own batteries, which presets would cross-multiply for no new law.
 #
-# Deliberately terse ON THE JS SIDE: the skeleton is copied verbatim into every one of
-# the ~11M harness files a full window generates, so a paragraph of JS comment is
-# gigabytes of duplicated prose. The explanation lives here instead, where it is read.
+# Kept terse on the JS side: the skeleton is copied verbatim into every harness file a
+# window generates, so a paragraph of JS comment is duplicated millions of times.
 _LASTINDEX_PRESETS_JS = '[0, 1, Math.floor(s.length / 2), s.length, s.length + 1]'
 
 # --- Per-API oracle snippets (JS, indented to sit inside the try block) ------

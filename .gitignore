@@ -1,0 +1,15 @@
+# Pipeline outputs.
+results/
+
+# Fandango, cloned and patched at setup time (see requirements.txt).
+fandango/
+
+__pycache__/
+*.pyc
+.engine-pins.json
+.git-commit
+
+# Editor cruft.
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,11 @@
+# Provenance is baked at build time via the GIT_COMMIT build arg (docker/build.sh),
+# so the repo's history is deliberately kept out of the image.
+.git
+.gitignore
+
+# Outputs, and the Fandango build tree, are produced inside the image.
+results/
+fandango/
+
+__pycache__/
+*.pyc

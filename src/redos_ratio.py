@@ -31,9 +31,9 @@ def ratio_fields(ms: dict, timed_out: list, engine_ratio: float) -> dict:
     - flagged + censored -> a sound lower bound, not a measured gap;
     - NOT flagged + censored -> not evidence of "no differential" either. The slow side
       was cut off at the same budget; only the fast engine's own time put the ratio under
-      the gate. Observed live: ``regex_14648`` match #38 flags true at no-flags and `d`
-      and false at `g`, with node and deno censored at 20000 ms in all three -- the
-      verdict flipped on bun's own time, nothing about V8 was measured.
+      the gate. Observed live: one regex flagged true at no-flags and `d` and false at
+      `g`, with node and deno censored at the harness budget in all three -- the verdict
+      flipped on bun's own time, nothing about V8 was measured.
 
     So the components are reported apart, and censoring is recorded whether or not the
     row was flagged:
@@ -43,10 +43,9 @@ def ratio_fields(ms: dict, timed_out: list, engine_ratio: float) -> dict:
     - ``ratio_censored``              -- set regardless of the flag, so unresolved
       negatives can be counted rather than silently read as negatives.
 
-    ``engine_specific`` stays the UNION of the two flagged components, bit-identical to
-    what this returned before the split, so artifacts already on disk and consumers
-    keying on it (``dedupe_headline.py``) keep reading the same field. Never report the
-    union as a single headline number -- it overstates what was measured.
+    ``engine_specific`` is the union of the two flagged components, so artifacts
+    already on disk and consumers keying on it keep reading the same field. Never
+    report the union as a single headline number -- it overstates what was measured.
     """
     slowest, fastest = max(ms, key=ms.get), min(ms, key=ms.get)
     # A 0.0ms floor would divide by zero. It is also the STRONGEST possible

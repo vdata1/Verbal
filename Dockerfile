@@ -1,15 +1,12 @@
-# Verbal experiment image: Python pipeline + the three JS regex engines, all in
-# ONE image. Python spawns node/bun/deno as in-process subprocesses exactly as it
-# does on bare metal (see eval/run_eval.py:run_engine) -- there is no per-call
-# container overhead. A full eval is ~1M short-lived engine spawns; putting each
-# engine in its own container would be catastrophic, so we deliberately do not.
+# Experiment image: the Python pipeline plus all three JS regex engines in ONE
+# image. Python spawns node/bun/deno as subprocesses exactly as it does on bare
+# metal, so there is no per-call container overhead; a full eval is ~1M
+# short-lived engine spawns, which one-container-per-engine could not sustain.
 #
-# Engine versions are PINNED to exactly what produced the recorded results
-# (results/eval_headline.json: node v26.5.0, bun 1.3.14, deno 2.9.1). They are
-# downloaded from official release artifacts by exact version -- not from a
-# distro "latest" channel -- and verified at container start (docker/entrypoint.sh
-# -> docker/assert_engine_versions.py). This closes the reproducibility gap where
-# the runner previously used whatever `node` happened to be first on PATH.
+# Engine versions are pinned to exactly what produced the reported results
+# (node v26.5.0, bun 1.3.14, deno 2.9.1), downloaded from official release
+# artifacts by exact version rather than a distro "latest" channel, and verified
+# at container start (docker/entrypoint.sh -> docker/assert_engine_versions.py).
 
 FROM python:3.12-slim
 
@@ -66,30 +63,36 @@ RUN printf '{"node":"%s","bun":"%s","deno":"%s"}\n' \
         "$NODE_VERSION" "$BUN_VERSION" "$DENO_VERSION" > /app/.engine-pins.json
 
 # --- Python deps ---
-# Fandango is the forked build (github.com/reallyTG/fandango-slight-change), cloned
-# into ./fandango. Installed NON-editable: the fork uses scikit-build-core (native
-# build), whose editable mode needs extra config and buys nothing in an image where
-# the code is fixed at build time -- to pick up fork changes you rebuild anyway.
-# Copy it + requirements first so this dependency layer caches independently of
-# pipeline-code edits.
+# Fandango is built from upstream at a pinned commit with patches/ applied: the
+# pipeline needs a customizable tree search and surrogate-permitting encode/decode.
+# Installed non-editable -- the build uses scikit-build-core, whose editable mode
+# needs extra configuration and buys nothing in an image whose code is fixed at
+# build time. Copied before the pipeline source so this layer caches independently
+# of code edits.
+ARG FANDANGO_COMMIT=01be7a03de16f3dfbd95fb1596884245b5f333e3
 COPY requirements.txt /app/requirements.txt
-COPY fandango /app/fandango
-RUN pip install --no-cache-dir /app/fandango \
-    && pip install --no-cache-dir -r /app/requirements.txt
+COPY patches /app/patches
+RUN set -eux; \
+    git clone https://github.com/fandango-fuzzer/fandango.git /app/fandango; \
+    cd /app/fandango; \
+    git checkout "$FANDANGO_COMMIT"; \
+    git apply /app/patches/fandango-verbal.patch; \
+    pip install --no-cache-dir /app/fandango; \
+    pip install --no-cache-dir -r /app/requirements.txt
 
-# --- Pipeline code + inputs (src/, eval/, config/, data/, docker/, tests/) ---
+# --- Pipeline code + inputs ---
 COPY . /app
 RUN chmod +x /app/docker/entrypoint.sh
 
-# Bake the source commit for provenance. The repo's .git is excluded from the build
-# context (see .dockerignore), so live `git` can't run in the image; pass the real
-# host commit at build time. docker/build.sh computes and passes this automatically.
-# Empty when unset -> provenance honestly records "unknown" rather than a fake hash.
+# Bake the source commit for provenance: the repo's .git is excluded from the
+# build context, so live `git` cannot run in the image. docker/build.sh computes
+# and passes this. Empty when unset, so provenance records "unknown" rather than a
+# fabricated hash.
 ARG GIT_COMMIT=""
 RUN printf '%s' "$GIT_COMMIT" > /app/.git-commit
 
 # Verify engine pins on every container start, then run the given command.
-# Fail-loud: a version drift aborts the run instead of silently producing
-# non-reproducible numbers (CLAUDE.md).
+# A version drift aborts the run instead of silently producing
+# non-reproducible numbers.
 ENTRYPOINT ["/app/docker/entrypoint.sh"]
 CMD ["/bin/bash"]

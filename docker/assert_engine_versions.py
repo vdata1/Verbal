@@ -2,15 +2,13 @@
 """Fail loud if the container's JS engines do not match the recorded pins.
 
 The pins are baked into <repo>/.engine-pins.json at image-build time from the
-Dockerfile ARGs, whose provenance is results/eval_headline.json -- the exact
-engine versions that produced the recorded eval results. Verifying at container
-start guarantees the image we actually run matches what we claim to run, which is
-the whole point of pinning (CLAUDE.md: reproducibility + fail loud).
+Dockerfile ARGs: the exact engine versions that produced the reported results.
+Verifying at container start guarantees the image being run matches the one being
+claimed, which is the whole point of pinning.
 
 Compares the semantic version number only (e.g. 2.9.1), not the full banner:
-deno reports its platform triple in the version string (aarch64-apple-darwin on
-the Mac that recorded the baseline, x86_64-unknown-linux-gnu in this image), and
-that difference is expected and irrelevant to the pin.
+deno reports its platform triple in the version string, and that difference is
+expected and irrelevant to the pin.
 """
 
 import json
@@ -19,15 +17,13 @@ import subprocess
 import sys
 from pathlib import Path
 
-# Repo-relative, NOT hardcoded to /app: this file lives at <repo>/docker/, so the
-# pins resolve correctly both in the image (where the repo is /app) and in a native
-# install at any prefix. Native runs must be able to invoke this directly --
-# nothing outside the Docker entrypoint runs it automatically, and drifted engines
-# make results incomparable.
+# Repo-relative rather than hardcoded to /app, so the pins resolve both in the
+# image and in a native install at any prefix. Nothing outside the Docker
+# entrypoint runs this automatically, so a native run should invoke it directly.
 PINS_FILE = Path(__file__).resolve().parent.parent / ".engine-pins.json"
 
-# We only need the version here; the eval's real invocation argv lives in
-# eval/run_eval.py:ENGINE_CMD and is intentionally not duplicated.
+# Only the version is needed here; the eval's invocation argv lives in
+# eval/run_eval.py:ENGINE_CMD and is deliberately not duplicated.
 VERSION_CMD = {
     "node": ["node", "--version"],
     "bun": ["bun", "--version"],

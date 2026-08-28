@@ -15,7 +15,7 @@
 // (Historically this probe validated with NO flags, on the assumption the harness
 // used none that affect construction. The `u`-requiring specializer broke that
 // invariant -- a `\p{...}` pattern constructs unflagged as literal escapes but throws
-// under the `/u` the harness carries. See EXPERIMENT_GAPS G1.)
+// under the `/u` the harness carries.)
 const fs = require("fs");
 const entries = JSON.parse(fs.readFileSync(process.argv[2], "utf8"));
 for (let i = 0; i < entries.length; i++) {

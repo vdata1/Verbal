@@ -1,0 +1,26 @@
+# Small-budget configuration for the quick-start example.
+#
+# Same schema as paper.yaml, with the generation budget and flag matrix shrunk so
+# a handful of regexes finish in seconds. Not for producing eval numbers.
+seed: 0
+corpus: data/paper_eval_set_patterns.json
+eval_slice: 3
+matchall_k: 3
+pad_candidates: ["\n", " ", "\t", "X", "\0", " "]
+
+# Base plus one toggle, rather than the full eight-way matrix.
+flag_variants: ["", "i"]
+
+chaos_n: 1
+chaos_ops: [delete, insert, substitute, duplicate, transpose, case_flip, truncate]
+chaos_alphabet: ["a", "Z", "0", " ", "\n", "é", "𐐷"]
+
+fuzz_n: 3
+fuzz_max_generations: 40
+fuzz_timeout_s: 6
+neutral_count_timeout_s: 6
+
+redos_slow_ms: 1000
+redos_engine_ratio: 10.0
+
+engines: [node, bun, deno]

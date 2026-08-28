@@ -1,7 +1,7 @@
 """Stage 3 -- string generation + harness synthesis.
 
-For one ``<api>.fan``: fuzz matching strings with Fandango (seeded, timeout-bounded
-exactly as ``fuzz_ebnf.py`` does), write them to ``<api>.strings.jsonl``, and
+For one ``<api>.fan``: fuzz matching strings with Fandango (seeded and
+timeout-bounded), write them to ``<api>.strings.jsonl``, and
 synthesize one ``<api>__<n>.js`` execution harness per string from the descriptor's
 template. Every harness prints the single canonical JSON line the eval runner diffs.
 
@@ -16,7 +16,7 @@ strings (0-1 matches) are kept; per-engine counts are recorded downstream.
 
 Two populations, one ``n`` space: the fuzz strings, then their chaos mutants
 (:mod:`pipeline.chaos`) -- boundary inputs that deliberately may fall outside the
-regex's language (see ``analysis/EXPERIMENT_GAPS.md`` G7). They are tested
+regex's language. They are tested
 identically and every record carries ``origin`` to tell them apart, because
 ``py_re_matches == 0`` means "the transpiler mis-modeled the regex" for a fuzz
 string and "the mutation worked" for a chaos one. Any consumer of that oracle MUST
@@ -41,12 +41,15 @@ import tempfile
 from fandango import Fandango
 from regex_fandango_transpiler import normalize_js_regex
 
-# Fandango logs a flood of "Could not generate a full population" WARNINGs and
-# "Only found N perfect solutions" (expected when a grammar has few unique strings
-# -- documented noise, not a failure; see the handoff). Quiet WARNING-level so
-# pipeline output is readable; ERROR+ stays visible. What actually matters (how
-# many strings each API got) is recorded in strings.jsonl regardless.
-logging.getLogger("fandango").setLevel(logging.ERROR)
+# Fandango reports "Could not generate a full population" and "Only found N perfect
+# solutions" whenever a grammar admits fewer unique strings than were asked for.
+# That is the expected case for a tightly constrained regex, not a failure, and it
+# is emitted at WARNING and ERROR level for every specialization -- enough noise to
+# bury the pipeline's own output. Silenced here and via `logging_level` on each
+# Fandango instance (the constructor resets its logger). Nothing is lost: how many
+# strings each API actually got is recorded in strings.jsonl and in the run record.
+FANDANGO_LOG_LEVEL = logging.CRITICAL
+logging.getLogger("fandango").setLevel(FANDANGO_LOG_LEVEL)
 
 from pipeline import chaos
 from pipeline.api_descriptors import ApiDescriptor
@@ -70,9 +73,9 @@ def _re_flags(js_flags: str) -> int:
     return bits
 
 
-# One-generation probe size for estimating a grammar's unique-string count. Not a
-# tuned magic number -- just "sample generously in one cheap generation to decide
-# whether at least fuzz_n distinct strings exist" (matches old fuzz_ebnf.py).
+# One-generation probe size for estimating a grammar's unique-string count: sample
+# generously in one cheap generation to decide whether at least fuzz_n distinct
+# strings exist.
 _UNIQUE_ESTIMATE_PROBE = 100
 
 
@@ -91,7 +94,7 @@ def _fuzz_worker(fan_content: str, seed: int, fuzz_n: int, max_generations: int,
     and the child exits nonzero, so the parent can tell a genuine crash (re-raise ->
     recorded as this regex's ``error`` outcome) from a timeout kill (partial results).
     """
-    logging.getLogger("fandango").setLevel(logging.ERROR)
+    logging.getLogger("fandango").setLevel(FANDANGO_LOG_LEVEL)
     random.seed(seed)
     try:
         seen: set[str] = set()
@@ -103,7 +106,8 @@ def _fuzz_worker(fan_content: str, seed: int, fuzz_n: int, max_generations: int,
                     out.write(json.dumps(s) + "\n")
                     out.flush()  # survive a SIGKILL: parent reads via the OS buffer
 
-            fdo = Fandango(fan_content, lazy=False, use_cache=False)
+            fdo = Fandango(fan_content, lazy=False, use_cache=False,
+                           logging_level=FANDANGO_LOG_LEVEL)
             # Cheap unique-string estimate (one generation, generous probe), then cap
             # the target so we don't chase more uniques than the grammar admits.
             estimate = len(fdo.fuzz(desired_solutions=_UNIQUE_ESTIMATE_PROBE,
@@ -335,12 +339,10 @@ def _string_records(strings: list[str], rid: str, api: str, pattern: str,
     same string it always did.
 
     Every record carries ``origin``. This is load-bearing, not decoration: the
-    ``py_re_matches == 0`` miscompilation oracle
-    (``analysis/eval_help_scripts/scan_miscompilations.py``) reads a non-matching
-    string as proof the transpiler mis-modeled the regex -- which is exactly what a
-    successful chaos mutant looks like. Those scanners filter on ``origin``; the
-    field is what keeps a deliberate boundary input from being reported as a
-    generation bug. A chaos record also carries ``seed_n`` + ``mutation``, which
+    ``py_re_matches == 0`` miscompilation oracle reads a non-matching string as
+    proof the transpiler mis-modeled the regex -- which is exactly what a successful
+    chaos mutant looks like. Filtering on ``origin`` is what keeps a deliberate
+    boundary input from being reported as a generation bug. A chaos record also carries ``seed_n`` + ``mutation``, which
     together with the config seed make it reconstructible from its seed string.
 
     ``py_re_matches`` is attached LAST, for every record in one bounded batch (see

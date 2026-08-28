@@ -73,26 +73,19 @@ def rewrite_js_codepoint_escapes(pattern: str) -> str:
     return "".join(out)
 
 
-# Letters that JS reads as IDENTITY escapes (the bare letter) but Perl/Python read
-# as something else -- so Python's `sre_parse` diverges from every JS engine:
-#   \A -> "A", \Z -> "Z"   (Python: string anchors)
-#   \z -> "z", \Q -> "Q", \E -> "E", \G -> "G"  (Python: rejected as "bad escape")
-#   \e -> "e", \K -> "K"   (Perl: ESC / keep-out; Python: rejected as "bad escape")
-# In JS (non-`u` mode) each is just the letter: `new RegExp("\\Q")` matches "Q", and
-# `\Q..\E` is NOT Perl quoting -- the content between is parsed normally. Likewise
-# `/\e/` matches "e" (NOT ESC 0x1B -- verified on node + bun), and `/\K/` matches "K"
-# (JS has no Perl \K). Since every target engine is JS, the literal reading is the
-# faithful one -- modeling `\e` as ESC would make the grammar generate ESC where the
-# real JS regex wants "e", a spurious differential-test discrepancy. Deliberate
-# MODELING choice (a corpus author likely meant the Perl construct, but the
-# differential test must exercise what JS does). These are SyntaxErrors under the `u`
-# flag; harnesses that add `u` catch that as a comparable {ok:false,error}.
+# Letters JS reads as identity escapes (the bare letter) where Perl and Python read
+# something else, so `sre_parse` diverges from every JS engine:
+#   \A -> "A", \Z -> "Z"                      (Python: string anchors)
+#   \z, \Q, \E, \G, \e, \K -> the letter    (Python: rejected as "bad escape")
+# In JS outside `u` mode each is just the letter: `\Q..\E` is not Perl quoting, `/\e/`
+# matches "e" rather than ESC, and JS has no Perl `\K`. Since every target engine is
+# JS, the literal reading is the faithful one; modeling `\e` as ESC would generate ESC
+# where the real regex wants "e", a spurious discrepancy. These are SyntaxErrors under
+# `u`, which harnesses adding `u` capture as a comparable {ok:false,error}.
 #
-# Only letters where JS *disagrees* with Python are listed. Letters JS and Python
-# agree on (\b \B \d \D \s \S \w \W \n \r \t \f \v) are left to `sre_parse`. (\a is a
-# further disagreement -- Python bell vs JS literal "a" -- but does not appear in the
-# corpus and is left for a future, fuller JS-identity-escape model.) Control escapes
-# `\cX` are handled separately (they map to a DIFFERENT char, not the letter) by
+# Only letters where JS disagrees with Python are listed; the ones they agree on
+# (\b \B \d \D \s \S \w \W \n \r \t \f \v) are left to `sre_parse`. Control escapes
+# `\cX` map to a different character, not the letter, and are handled by
 # `rewrite_js_control_escapes`.
 _JS_IDENTITY_LETTER_ESCAPES = frozenset("AZzQEGeK")
 
@@ -448,7 +441,7 @@ class SurrogateEscapeUnmodeled(ValueError):
     ``\uD807[\uDEE0-\uDEF8]`` -- a surrogate PAIR that in JS (non-``u``) denotes the
     astral range U+11EE0..U+11EF8. Python treats each half as a lone surrogate, which
     cannot even be UTF-8 encoded, and we do not model UTF-16 pairing. Raised so the
-    pipeline records a clean typed outcome (human-decided 2026-07-08) rather than
+    pipeline records a clean typed outcome rather than
     crashing with UnicodeEncodeError."""
 
     def __init__(self, codepoint: int):
@@ -496,9 +489,8 @@ import functools as _functools
 def _unicode_property_ranges(token: str) -> tuple:
     r"""Sorted ``((start, end), ...)`` code-point ranges for the Unicode property
     `token` (the text inside ``\p{...}`` or the single letter of ``\pX``), resolved
-    by the authoritative ``regex`` module (a de-facto dependency, already used by
-    ``src/main.py``). This is the single, data-driven property->ranges table the
-    ``\p{}`` fix is built on -- NOT a per-regex or hand-transcribed map.
+    by the authoritative ``regex`` module. This is the single, data-driven
+    property->ranges table -- not a per-regex or hand-transcribed map.
 
     The resolution is exact: we ask ``regex`` (which implements the full Unicode
     property database -- general categories, scripts, blocks, POSIX aliases) which
@@ -580,7 +572,7 @@ def rewrite_js_unicode_properties(pattern: str) -> str:
     ``u`` flag (bare ``\p`` is a literal ``p`` in non-``u`` mode, and the single-letter
     ``\pL`` form is Perl/PCRE, not even valid JS-with-``u``). A corpus author writing
     ``\p{L}`` / ``\pL`` plainly means the Unicode property, so -- **decided (human,
-    2026-07-08)** -- we map each property to its exact code-point set (highest
+    )** -- each property maps to its exact code-point set (highest
     fidelity) via :func:`_unicode_property_ranges`, and emit that set as ``[...]``.
     ``_requires_u`` already flags these regexes as needing ``u``. Modeling reading
     worth a sentence in the paper.
@@ -703,7 +695,7 @@ def ANY_CHAR() -> str:
     that is actually fed to it. The prior multi-byte form never delivered a genuine
     astral character to the engine anyway (always a byte-run), so no real coverage
     is lost. Range matches the old ``<utf8_char1>`` (``\n`` included, as before).
-    Human-approved global modeling decision (2026-07-07).
+    A global modeling decision, applied uniformly.
     """
     return r"r'[\x00-\x7f]'"
 
@@ -719,7 +711,7 @@ def DOT_CHAR() -> str:
     already outside the ASCII cap, so nothing extra is needed here. Emitting the
     full ``[\x00-\x7f]`` for ``.`` (as before) let Fandango place a ``\n``/``\r``
     inside a ``.``-span, producing a string the regex does not actually match under
-    the harness flags (no ``s``) -- a mis-compilation (2026-07-07 full-sample scan).
+    the harness flags (no ``s``) -- a mis-compilation.
 
     The corpus patterns are bare (no flags) and no API harness sets the ``s`` flag,
     so non-DOTALL is the correct, uniform assumption for every regex. This is only

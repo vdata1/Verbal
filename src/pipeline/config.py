@@ -1,6 +1,6 @@
 """Resolved experiment configuration + provenance.
 
-CLAUDE.md rules enforced here:
+Invariants enforced here:
 - Configuration over code: every experiment parameter is loaded from a versioned
   YAML file into a frozen dataclass. No tuned constant lives inline in the
   pipeline modules.
@@ -260,19 +260,16 @@ def recorded_commit() -> str:
     return _git_commit()
 
 
-# --- Chunk context (EXPERIMENT_GAPS G6, remaining item 2) --------------------
-# The four provenance axes do not determine an artifact generated before `3ab1fc3`:
-# generation depended on how many rows preceded a row IN ITS PROCESS, and chunk
-# context was a hidden fifth input nothing recorded. HEAD is position-independent
-# (each `_fuzz` forks a child and reseeds), so this is belt-and-braces rather than
-# load-bearing -- but an artifact should still state how it was made instead of
-# requiring a reader to know the driver's chunking defaults.
+# --- Chunk context -----------------------------------------------------------
+# Generation is position-independent -- each `_fuzz` forks a child and reseeds -- so
+# recording the chunk an artifact was generated in is belt-and-braces rather than
+# load-bearing. An artifact should still state how it was made instead of requiring a
+# reader to know the driver's chunking defaults.
 #
-# Set ONCE per process by the entry point, alongside `seed_everything`. That is the
-# correct scope, not a compromise: `overnight_run.py` is one fresh process per chunk,
-# so a process-level value IS the chunk's identity. Unset stays unset -- the keys are
-# emitted as null rather than omitted, so "nobody declared a chunk" is greppable and
-# never mistaken for "generated as a whole window".
+# Set once per process by the entry point, alongside `seed_everything`: a driver runs
+# one fresh process per chunk, so a process-level value is the chunk's identity. Unset
+# stays unset -- the keys are emitted as null rather than omitted, so "nobody declared
+# a chunk" is greppable and never mistaken for "generated as a whole window".
 _CHUNK_CONTEXT: dict[str, int] | None = None
 
 
@@ -303,13 +300,12 @@ def clear_chunk_context() -> None:
 
 
 def provenance(config: Config) -> dict:
-    """The traceability facts every artifact must carry (CLAUDE.md).
+    """The traceability facts every artifact must carry.
 
     git_commit + config_sha + seed + corpus_sha pin a result to the code, parameters,
-    randomness, and data that produced it; chunk_start/chunk_count pin the process
-    slicing that a pre-`3ab1fc3` artifact also depended on (see the chunk-context
-    block above). ``config_sha`` hashes the resolved config ONLY, so adding these
-    keys leaves it unchanged and windows stay comparable across this commit.
+    randomness, and data that produced it; chunk_start/chunk_count record the process
+    slicing (see the chunk-context block above). ``config_sha`` hashes the resolved
+    config only, so these keys leave it unchanged and windows stay comparable.
     """
     resolved = asdict(config)
     config_sha = _sha256_text(json.dumps(resolved, sort_keys=True, ensure_ascii=True))

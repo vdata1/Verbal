@@ -1,65 +1,48 @@
-"""Central filesystem layout for the Verbal pipeline.
+"""Filesystem layout.
 
-Single source of truth for every input/output location. All paths are resolved
-from the project root (derived from this file's location) rather than from the
-current working directory, so the pipeline produces the same layout no matter
-where it is launched from. See CLAUDE.md ("configuration over code") -- do not
-reintroduce scattered CWD-relative path constants in the individual modules.
+Single source of truth for every input and output location. Paths resolve from
+the project root (derived from this file's location), not the current working
+directory, so the layout is the same wherever the pipeline is launched from.
 
-Layout:
-    <root>/data      inputs (regex corpora), tracked in git
-    <root>/src       pipeline code + unit_test_templates
-    <root>/results   all generated outputs, gitignored
+    <root>/data      input corpora
+    <root>/src       pipeline code
+    <root>/results   generated outputs
 """
 
 import os
 
-# This file lives at <root>/src/paths.py, so the root is two levels up.
+# This file lives at <root>/src/paths.py.
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# --- Inputs (tracked in git) -------------------------------------------------
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
-REGEX_CORPUS = os.path.join(DATA_DIR, "uniq-regexes-8.json")
 
-# --- Code-adjacent assets ----------------------------------------------------
 SRC_DIR = os.path.join(PROJECT_ROOT, "src")
-UNIT_TEST_TEMPLATES_DIR = os.path.join(SRC_DIR, "unit_test_templates")
 PIPELINE_DIR = os.path.join(SRC_DIR, "pipeline")
 # Node script used as the reference JS-regex validity gate (see pipeline/js_regex.py).
 JS_REGEX_PROBE = os.path.join(PIPELINE_DIR, "js_regex_probe.js")
 
-# --- Outputs (gitignored, created on demand) ---------------------------------
 RESULTS_DIR = os.path.join(PROJECT_ROOT, "results")
-GENERATED_GRAMMARS_DIR = os.path.join(RESULTS_DIR, "generated_grammars")
-GENERATED_TEST_INPUTS_DIR = os.path.join(RESULTS_DIR, "generated_test_inputs")
-GENERATED_UNIT_TESTS_DIR = os.path.join(RESULTS_DIR, "generated_unit_tests")
-DIFF_TEST_RESULTS_DIR = os.path.join(RESULTS_DIR, "diff_test_results")
-GENERATION_RECORD = os.path.join(RESULTS_DIR, "generation_record.json")
 
-# --- Config (versioned experiment parameters) --------------------------------
 CONFIG_DIR = os.path.join(PROJECT_ROOT, "config")
-DEFAULT_CONFIG = os.path.join(CONFIG_DIR, "default.yaml")
 
 
-# --- New pipeline: per-regex artifact layout ---------------------------------
+# --- Per-regex artifact layout -----------------------------------------------
 # Every artifact for a regex lives under results/<regex_id>/, so all stages are
-# joinable by id and there is room for a mutations/ subtree later. See the
-# settled pipeline design (2026-07-06).
+# joinable by id:
 #
-#   results/<regex_id>/base.fan               Stage 1 output (mutation-free)
-#   results/<regex_id>/<api>.fan              Stage 2 output (specialized)
-#   results/<regex_id>/<api>.strings.jsonl    Stage 3 generated strings
-#   results/<regex_id>/<api>__<n>.js          Stage 3 synthesized harness
-#   results/<regex_id>/<api>.diff.json        eval cross-engine diff
+#   results/<regex_id>/base.fan               Stage 1, mutation-free
+#   results/<regex_id>/<api>.fan              Stage 2, specialized per API
+#   results/<regex_id>/<api>.strings.jsonl    Stage 3, generated strings
+#   results/<regex_id>/<api>__<n>__<flags>.js Stage 3, synthesized harness
+#   results/<regex_id>/<api>.diff.json        cross-engine diff
 #
-# regex_id scheme: `regex_<n>` where n is the 0-based line index of the regex in
-# the corpus JSONL. Chosen (over a content hash) to match the existing scheme and
-# because the corpus is a fixed, ordered file consumed via a deterministic slice,
-# so positional ids are stable and human-legible. Documented per the handoff.
+# The id is `regex_<n>`, n being the 0-based position of the regex in the corpus.
+# Positional rather than a content hash: the corpus is a fixed, ordered file
+# consumed via a deterministic slice, so positions are stable and human-legible.
 
 
 def regex_id(index: int) -> str:
-    """Stable id for the regex at 0-based corpus line `index`."""
+    """Stable id for the regex at 0-based corpus position `index`."""
     if index < 0:
         raise ValueError(f"corpus index must be >= 0, got {index}")
     return f"regex_{index}"
@@ -87,7 +70,7 @@ def harness_flag_tag(flags: str) -> str:
 
 
 def api_harness_path(rid: str, api: str, n: int, flags: str) -> str:
-    # results/<rid>/<api>__<n>__<flagtag>.js  -- one harness per (string, flag set).
+    # One harness per (string, flag set).
     return os.path.join(regex_dir(rid), f"{api}__{n}__{harness_flag_tag(flags)}.js")
 
 
@@ -96,13 +79,11 @@ def api_diff_path(rid: str, api: str) -> str:
 
 
 # --- Per-window run artifacts ------------------------------------------------
-# run_record and eval_headline describe ONE corpus window [start, end). They are
-# named for that window rather than written to a fixed path: a fixed name means a
-# second chunk silently overwrites the first one's record, which loses the earlier
-# chunk's outcomes (the artifacts survive, but nothing records that they are
-# evaluable) and leaves a headline that describes a narrower window than the
-# results directory it sits in. The window is in the filename so chunks coexist and
-# every file says which rows it covers.
+# A run record and a headline describe ONE corpus window [start, end), and are
+# named for it rather than written to a fixed path. With a fixed name a second
+# window silently overwrites the first one's record, losing the earlier window's
+# outcomes and leaving a headline that describes less than the results directory
+# it sits in.
 
 
 def window_tag(start: int, end: int | None) -> str:
@@ -130,19 +111,17 @@ def redos_report_path(start: int, end: int | None) -> str:
 
 
 def redos_queue_path(start: int, end: int | None) -> str:
-    """results/redos_queue_<start>_<end>.json -- DEFERRED, unconfirmed candidates.
+    """results/redos_queue_<start>_<end>.json -- deferred, unconfirmed candidates.
 
-    Written instead of a redos report under ``--redos-defer``. Deliberately a
-    DIFFERENT filename from redos_<window>.json: a queue holds nominations measured
-    under pool load, a report holds verdicts measured unloaded, and the whole point of
-    the split is that those are not interchangeable. Sharing a name would let a
-    consumer read nominations as findings.
+    Written instead of a report under ``--redos-defer``. Deliberately a different
+    filename: a queue holds nominations measured under pool load, a report holds
+    verdicts measured unloaded, and those are not interchangeable.
     """
     return os.path.join(RESULTS_DIR, f"redos_queue_{window_tag(start, end)}.json")
 
 
 def find_run_records() -> list[str]:
-    """Every run_record_*.json present, sorted. Used to make a miss actionable."""
+    """Every run_record_*.json present, sorted."""
     import glob
     return sorted(glob.glob(os.path.join(RESULTS_DIR, "run_record_*.json")))
 
@@ -156,11 +135,4 @@ def ensure_regex_dir(rid: str) -> str:
 
 def ensure_results_dirs() -> None:
     """Create the output directory tree if it does not exist yet."""
-    for directory in (
-        RESULTS_DIR,
-        GENERATED_GRAMMARS_DIR,
-        GENERATED_TEST_INPUTS_DIR,
-        GENERATED_UNIT_TESTS_DIR,
-        DIFF_TEST_RESULTS_DIR,
-    ):
-        os.makedirs(directory, exist_ok=True)
+    os.makedirs(RESULTS_DIR, exist_ok=True)

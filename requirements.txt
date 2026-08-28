@@ -1,20 +1,28 @@
-# Verbal pipeline Python dependencies.
+# Python dependencies.
 #
-# Fandango is not on PyPI: it is the fork at
-# github.com/reallyTG/fandango-slight-change, cloned into ./fandango and installed
-# from there NON-editable (the fork uses scikit-build-core, whose editable mode
-# needs extra config and buys nothing):
-#   git clone https://github.com/reallyTG/fandango-slight-change.git ./fandango
+# Fandango is not installed from PyPI. The pipeline needs two small additions to
+# upstream Fandango -- a customizable tree search and surrogate-permitting
+# encode/decode -- supplied as patches/fandango-verbal.patch (21 lines, 2 files)
+# against the pinned upstream commit below. Requires Python >= 3.11.
+#
+#   git clone https://github.com/fandango-fuzzer/fandango.git fandango
+#   git -C fandango checkout 01be7a03de16f3dfbd95fb1596884245b5f333e3
+#   git -C fandango apply ../patches/fandango-verbal.patch
 #   pip install ./fandango
-# Both install paths do exactly this -- Dockerfile lines 76-77 and lxc_provision.sh.
-# Verified version at build time: fandango 1.1.1. Requires Python >= 3.11.
 #
-# Reproducibility note: the node/bun/deno engine versions are NOT Python deps but
-# are part of the experimental environment. The canonical pins are the versions
-# that produced the recorded results (results/eval_headline.json):
-#   node v26.5.0, bun 1.3.14, deno 2.9.1
-# The Docker image installs exactly these and verifies them at container start
-# (docker/assert_engine_versions.py). Outside Docker they are only PATH lookups,
-# so bare-metal runs must ensure these versions are first on PATH.
+# Installed non-editable: the build uses scikit-build-core, whose editable mode
+# needs extra configuration and buys nothing here.
+#
+# The node/bun/deno engine versions are not Python dependencies but are part of
+# the experimental environment. The pins that produced the reported results are
+# node v26.5.0, bun 1.3.14, deno 2.9.1. The Docker image installs exactly these
+# and verifies them at container start (docker/assert_engine_versions.py).
+# Outside Docker they are PATH lookups, so a bare-metal run must put these
+# versions first on PATH.
 
 PyYAML==6.0.3
+
+# The authoritative Unicode property-escape resolver, used by the transpiler to
+# rewrite every known \p{...} to an exact code-point set. Fandango also depends on
+# it; declared here because this project imports it directly.
+regex>=2024.11.6
